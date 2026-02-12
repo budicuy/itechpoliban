@@ -6,6 +6,8 @@ import {
   MdMemory,
   MdBrush,
   MdBusinessCenter,
+  MdRocketLaunch,
+  MdChevronRight,
 } from "react-icons/md";
 
 export default function Divisi() {
@@ -17,9 +19,10 @@ export default function Divisi() {
       color: "from-red-500 to-orange-500",
       iconColor: "text-red-500",
       bg: "bg-red-500/10",
-      border: "hover:border-red-500/30",
+      border: "hover:border-red-500/50",
+      tag: "Security",
       description:
-        "Wadah bagi mahasiswa Poliban untuk mempelajari kerentanan di dunia maya dan mengembangkan kemampuan menjadi ahli keamanan. Fokus pada kompetensi Capture The Flag (CTF) — kompetensi hacking untuk mengambil flag dengan berbagai metode teknis.",
+        "Wadah bagi mahasiswa Poliban untuk mempelajari kerentanan di dunia maya dan mengembangkan kemampuan menjadi ahli keamanan. Fokus pada kompetensi Capture The Flag (CTF) — kompetensi hacking profesional.",
     },
     {
       id: 2,
@@ -28,9 +31,10 @@ export default function Divisi() {
       color: "from-blue-500 to-cyan-500",
       iconColor: "text-blue-500",
       bg: "bg-blue-500/10",
-      border: "hover:border-blue-500/30",
+      border: "hover:border-blue-500/50",
+      tag: "Creative",
       description:
-        "Tempat bagi seniman visual untuk menciptakan dunia yang hidup. Terlibat dalam proses dari konsep hingga hasil akhir, fokus pada desain karakter, teknik animasi, dan visualisasi cerita yang menggabungkan imajinasi artistik dengan keahlian teknis.",
+        "Tempat bagi seniman visual untuk menciptakan dunia yang hidup. Fokus pada desain karakter, teknik animasi, dan visualisasi cerita yang menggabungkan imajinasi artistik dengan keahlian teknis tingkat tinggi.",
     },
     {
       id: 3,
@@ -39,9 +43,10 @@ export default function Divisi() {
       color: "from-primary to-purple-500",
       iconColor: "text-primary",
       bg: "bg-primary/10",
-      border: "hover:border-primary/30",
+      border: "hover:border-primary/50",
+      tag: "Software",
       description:
-        "Wadah pengembangan perangkat lunak dari perancangan konsep hingga implementasi kode. Menguasai berbagai bahasa pemrograman dan teknologi terkini untuk membangun solusi perangkat lunak yang efisien, inovatif, dan berdampak nyata.",
+        "Pengembangan perangkat lunak dari konsep hingga kode. Menguasai bahasa pemrograman dan teknologi terkini untuk membangun solusi perangkat lunak yang efisien, inovatif, dan berdampak nyata bagi industri.",
     },
     {
       id: 5,
@@ -50,9 +55,10 @@ export default function Divisi() {
       color: "from-emerald-500 to-teal-500",
       iconColor: "text-emerald-500",
       bg: "bg-emerald-500/10",
-      border: "hover:border-emerald-500/30",
+      border: "hover:border-emerald-500/50",
+      tag: "Gaming",
       description:
-        "Eksplorasi kreativitas dalam pembuatan permainan. Merancang, mengembangkan, dan menguji game dengan fokus pada pemrograman, desain grafis, dan animasi untuk menciptakan pengalaman bermain yang menghibur dan inovatif.",
+        "Eksplorasi kreativitas dalam pembuatan permainan digital. Merancang, mengembangkan, dan menguji game dengan fokus pada grafis, dan animasi untuk menciptakan pengalaman bermain yang luar biasa.",
     },
     {
       id: 6,
@@ -61,9 +67,10 @@ export default function Divisi() {
       color: "from-purple-500 to-indigo-500",
       iconColor: "text-purple-500",
       bg: "bg-purple-500/10",
-      border: "hover:border-purple-500/30",
+      border: "hover:border-purple-500/50",
+      tag: "Hardware",
       description:
-        "Menggali potensi konektivitas objek fisik melalui jaringan digital. Merancang solusi teknologi dari perancangan sensor cerdas hingga pemantauan jarak jauh untuk menciptakan lingkungan pintar guna mewujudkan potensi Revolusi Industri 4.0.",
+        "Menggali konektivitas objek fisik melalui jaringan digital. Solusi teknologi dari sensor cerdas hingga pemantauan jarak jauh untuk menciptakan lingkungan pintar guna mewujudkan Revolusi Industri 4.0.",
     },
     {
       id: 7,
@@ -72,9 +79,10 @@ export default function Divisi() {
       color: "from-orange-500 to-yellow-500",
       iconColor: "text-orange-500",
       bg: "bg-orange-500/10",
-      border: "hover:border-orange-500/30",
+      border: "hover:border-orange-500/50",
+      tag: "Design",
       description:
-        "Fokus pada desain antarmuka dan pengalaman pengguna yang intuitif. Melalui riset, prototipe, dan usability testing untuk menciptakan pengalaman digital optimal yang meningkatkan kepuasan pengguna di berbagai platform.",
+        "Fokus pada desain antarmuka dan pengalaman pengguna yang intuitif. Melalui riset, prototipe, dan usability testing untuk menciptakan pengalaman digital optimal yang meningkatkan kepuasan pengguna.",
     },
     {
       id: 8,
@@ -83,73 +91,109 @@ export default function Divisi() {
       color: "from-slate-400 to-slate-600",
       iconColor: "text-slate-400",
       bg: "bg-slate-400/10",
-      border: "hover:border-slate-400/30",
+      border: "hover:border-slate-400/50",
+      tag: "Business",
       description:
-        "Wadah pengembangan bisnis berbasis teknologi. Identifikasi peluang pasar, perancangan model bisnis inovatif, dan strategi pemasaran digital untuk mendorong kewirausahaan mahasiswa melalui pemahaman sinergi bisnis dan teknis.",
+        "Wadah pengembangan bisnis berbasis teknologi. Identifikasi peluang pasar, model bisnis inovatif, dan strategi pemasaran digital untuk mendorong kewirausahaan mahasiswa melalui sinergi bisnis dan teknis.",
     },
   ];
 
   return (
     <section className="py-20 lg:py-32 bg-background-dark relative overflow-hidden" id="divisi">
-      {/* Decorative Background Elements */}
-      <div className="absolute top-1/4 left-0 w-96 h-96 bg-primary/10 rounded-full blur-[120px] -ml-48"></div>
-      <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-accent/5 rounded-full blur-[120px] -mr-48"></div>
+      {/* Dynamic Background */}
+      <div className="absolute top-0 inset-x-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent"></div>
+      <div className="absolute top-1/3 left-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[150px] -ml-[300px]"></div>
+      <div className="absolute bottom-1/3 right-0 w-[600px] h-[600px] bg-accent/5 rounded-full blur-[150px] -mr-[300px]"></div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="text-center mb-20 space-y-4">
-          <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary">
-            <span className="w-2 h-2 rounded-full bg-accent mr-2 animate-pulse"></span>
-            <span className="text-[10px] font-black uppercase tracking-[0.2em]">
-              Our Departments
-            </span>
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
+          <div className="space-y-4 max-w-2xl">
+            <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary">
+              <span className="w-1.5 h-1.5 rounded-full bg-accent mr-2"></span>
+              <span className="text-[10px] font-black uppercase tracking-[0.2em]">Our Specializations</span>
+            </div>
+            <h2 className="text-4xl md:text-6xl font-black text-white leading-tight tracking-tight">
+              Kuasai Ilmu, <br />
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-primary via-purple-400 to-accent">Wujudkan Masa Depan</span>
+            </h2>
           </div>
-          <h2 className="text-4xl md:text-5xl font-black text-white leading-tight tracking-tighter">
-            Eksplorasi <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-purple-500">Potensimu</span> <br /> 
-            di Berbagai Bidang
-          </h2>
-          <p className="text-slate-400 max-w-2xl mx-auto font-medium">
-            Pilih divisi yang sesuai dengan passion-mu dan mari berkembang bersama di ekosistem teknologi terbaik.
+          <p className="text-slate-400 max-w-sm font-medium text-lg leading-relaxed border-l-2 border-primary/30 pl-6 hidden md:block">
+            Pilih jalur spesialisasimu dan kembangkan talenta di lingkungan yang tepat.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {divisions.map((div) => (
             <div
               key={div.id}
-              className={`group glass-card p-8 rounded-[2.5rem] border-white/5 ${div.border} transition-all duration-500 hover:-translate-y-2 relative overflow-hidden flex flex-col items-start text-left`}
+              className={`group relative glass-card p-10 rounded-[3rem] border-white/5 ${div.border} transition-all duration-700 hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)] cursor-default overflow-hidden`}
             >
-              {/* Card Decorator */}
-              <div className={`absolute top-0 right-0 w-32 h-32 opacity-10 group-hover:opacity-20 transition-opacity bg-linear-to-br ${div.color} rounded-full -mr-16 -mt-16 blur-2xl`}></div>
-              
-              <div className={`w-14 h-14 rounded-2xl ${div.bg} flex items-center justify-center mb-6 border border-white/10 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500`}>
-                <div.icon className={`text-3xl ${div.iconColor}`} />
-              </div>
+              {/* Animated Corner Highlight - Fixed to follow border radius */}
+              <div className={`absolute top-0 right-0 w-[3px] h-0 bg-linear-to-b ${div.color} group-hover:h-32 transition-all duration-700 z-30 rounded-full`}></div>
+              <div className={`absolute top-0 right-0 w-0 h-[3px] bg-linear-to-l ${div.color} group-hover:w-32 transition-all duration-700 z-30 rounded-full`}></div>
 
-              <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-accent transition-colors">
-                {div.name}
-              </h3>
-              
-              <p className="text-slate-400 text-sm leading-relaxed font-medium group-hover:text-slate-300 transition-colors">
-                {div.description}
-              </p>
+              {/* Background Number */}
+              <span className="absolute -bottom-4 -right-2 text-9xl font-black text-white/[0.03] select-none group-hover:text-white/[0.05] transition-colors duration-700">
+                0{div.id}
+              </span>
 
-              <div className="mt-8 flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-primary opacity-0 group-hover:opacity-100 transition-all translate-y-2 group-hover:translate-y-0">
-                Join Division <span className="text-lg">→</span>
+              <div className="relative z-10">
+                <div className="flex items-center justify-between mb-8">
+                  <div className={`w-16 h-16 rounded-[1.5rem] ${div.bg} flex items-center justify-center border border-white/5 group-hover:border-white/10 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-inner`}>
+                    <div.icon className={`text-3xl ${div.iconColor} drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]`} />
+                  </div>
+                  <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[8px] font-black uppercase tracking-widest text-slate-400 group-hover:text-white transition-colors">
+                    {div.tag}
+                  </span>
+                </div>
+
+                <h3 className="text-2xl font-black text-white mb-4 tracking-tight group-hover:text-accent transition-colors duration-500">
+                  {div.name}
+                </h3>
+                
+                <p className="text-slate-400 text-sm leading-relaxed font-medium group-hover:text-slate-200 transition-colors duration-500 pr-4">
+                  {div.description}
+                </p>
+
+                <div className="mt-10 flex items-center gap-3 overflow-hidden">
+                  <div className={`h-px w-8 bg-linear-to-r ${div.color} group-hover:w-16 transition-all duration-500`}></div>
+                  <span className="text-[10px] font-black uppercase tracking-widest text-primary group-hover:text-white whitespace-nowrap translate-x-[-10px] opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-500">
+                    Learn More
+                  </span>
+                </div>
               </div>
             </div>
           ))}
           
-          {/* Decorative Call to Action or Info Card if 7 items */}
-          <div className="md:col-span-2 lg:col-span-1 p-8 rounded-[2.5rem] bg-linear-to-br from-primary to-purple-700 flex flex-col items-center justify-center text-center space-y-4 group cursor-pointer relative overflow-hidden min-h-[300px]">
-            <div className="absolute inset-0 bg-dotted-grid-bg opacity-20"></div>
-            <div className="relative z-10">
-              <h3 className="text-2xl font-black text-white">Ingin Tahu Lebih Lanjut?</h3>
-              <p className="text-white/80 text-sm font-medium px-4">
-                Bergabunglah dengan komunitas kami dan mulailah perjalanan teknologimu hari ini.
-              </p>
-              <button type="button" className="mt-6 px-8 py-3 bg-white text-primary rounded-full font-bold hover:scale-105 active:scale-95 transition-all shadow-xl">
-                Hubungi Kami
-              </button>
+          {/* CTA Card - The "Mantap" part */}
+          <div className="md:col-span-2 lg:col-span-1 group perspective-1000">
+            <div className="relative h-full overflow-hidden rounded-[3rem] p-1 shadow-2xl transition-all duration-700 group-hover:scale-[1.02]">
+              {/* Moving Gradient Background */}
+              <div className="absolute inset-0 bg-linear-to-br from-primary via-purple-600 to-accent animate-[gradient_8s_ease_infinite] bg-[length:400%_400%]"></div>
+              
+              <div className="relative h-full bg-slate-950/90 backdrop-blur-xl rounded-[2.9rem] p-10 flex flex-col items-center justify-center text-center space-y-6 overflow-hidden">
+                <div className="absolute inset-0 bg-dotted-grid-bg opacity-20 group-hover:opacity-40 transition-opacity"></div>
+                
+                <div className="relative z-10 space-y-6">
+                  <div className="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mx-auto border border-white/20 animate-bounce">
+                    <MdRocketLaunch className="text-4xl text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-3xl font-black text-white leading-tight">Siap Untuk <br />Bergabung?</h3>
+                    <p className="text-white/60 text-sm font-medium mt-3 px-4">
+                      Jadilah bagian dari generasi teknologi berikutnya bersama Poliban.
+                    </p>
+                  </div>
+                  <button type="button" className="group/btn relative px-8 py-4 bg-white text-slate-900 rounded-full font-black text-sm uppercase tracking-widest hover:bg-accent transition-all duration-300 shadow-[0_10px_30px_rgba(255,255,255,0.2)] flex items-center gap-2 mx-auto">
+                    Daftar Sekarang
+                    <MdChevronRight className="text-xl group-hover/btn:translate-x-1 transition-transform" />
+                  </button>
+                </div>
+
+                {/* Decorative floating dots */}
+                <div className="absolute top-10 left-10 w-2 h-2 bg-accent rounded-full animate-pulse"></div>
+                <div className="absolute bottom-10 right-10 w-3 h-3 bg-primary rounded-full animate-ping shadow-[0_0_15px_rgba(102,15,189,0.5)]"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -157,4 +201,3 @@ export default function Divisi() {
     </section>
   );
 }
-
