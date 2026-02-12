@@ -4,109 +4,175 @@ import { HiCheck } from "react-icons/hi2";
 export default function About() {
   return (
     <section
-      className="py-20 lg:py-32 bg-white dark:bg-background-dark relative overflow-hidden"
+      className="py-16 lg:py-32 bg-background-light dark:bg-background-dark relative overflow-hidden"
       id="about"
     >
+      {/* Background Decorative Elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-0 left-0 w-full h-full dotted-grid-bg opacity-30"></div>
+        <div className="absolute -top-24 -left-24 w-96 h-96 bg-primary/10 rounded-full blur-[100px] animate-pulse"></div>
+        <div className="absolute -bottom-24 -right-24 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[100px]"></div>
+      </div>
+
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Visual Side */}
-          <div className="relative">
-            <div className="relative z-10 bg-slate-50 dark:bg-white/5 rounded-[2.5rem] p-8 sm:p-12 border border-slate-200 dark:border-white/10 shadow-2xl">
-              <div className="relative aspect-square w-full max-w-[320px] mx-auto">
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+          <div className="relative group">
+            <div className="relative w-full aspect-square max-w-[450px] mx-auto flex items-center justify-center">
+              {/* Spinning Orbits */}
+              <div className="absolute orbital-path w-[110%] h-[110%] border-primary/20 rotating-orbit"></div>
+              <div
+                className="absolute orbital-path w-[130%] h-[130%] border-accent/10 rotating-orbit"
+                style={{
+                  animationDirection: "reverse",
+                  animationDuration: "25s",
+                }}
+              ></div>
+
+              {/* Glow Effect */}
+              <div
+                className="absolute inset-0 bg-linear-to-tr from-primary/30 to-accent/10 rounded-full blur-[60px] opacity-50 group-hover:opacity-80 transition-opacity duration-1000"
+              ></div>
+
+              {/* Main Logo */}
+              <div className="relative z-10 w-full h-full p-8 sm:p-12 floating-icon">
                 <Image
                   alt="iTech Poliban Logo"
-                  className="object-contain"
+                  className="w-full h-full object-contain drop-shadow-[0_0_30px_rgba(102,15,189,0.3)] transition-all duration-700 group-hover:scale-105 group-hover:rotate-2"
                   src="/logo-itech.svg"
-                  fill
+                  width={400}
+                  height={400}
                   priority
                 />
               </div>
 
-              {/* Stats/Badges inside the box */}
-              <div className="absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-3xl shadow-xl hidden sm:block">
-                <p className="text-3xl font-black">2021</p>
-                <p className="text-[10px] uppercase font-bold tracking-widest opacity-80">
-                  Founded Year
-                </p>
+              {/* Floating Stat Badges */}
+              <div 
+                className="absolute -top-4 -left-4 glass-card p-4 rounded-2xl shadow-xl floating-icon z-20 border-white/20"
+                style={{ animationDelay: '0s' }}
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center text-primary">
+                    <span className="font-black">3+</span>
+                  </div>
+                  <div>
+                    <p className="text-[10px] text-slate-500 font-bold uppercase tracking-tighter">Years of</p>
+                    <p className="text-xs font-black dark:text-white">Experience</p>
+                  </div>
+                </div>
               </div>
-            </div>
 
-            {/* Decortive background element */}
-            <div className="absolute -top-10 -left-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl"></div>
-            <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-accent/10 rounded-full blur-3xl"></div>
+              <div 
+                className="absolute top-1/2 -right-8 glass-card p-4 rounded-2xl shadow-xl floating-icon z-20 border-white/20"
+                style={{ animationDelay: '1.5s' }}
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-accent/20 flex items-center justify-center text-accent">
+                    <span className="font-black">100+</span>
+                  </div>
+                  <div>
+                    <p className="text-[10px] text-slate-500 font-bold uppercase tracking-tighter">Active</p>
+                    <p className="text-xs font-black dark:text-white">Members</p>
+                  </div>
+                </div>
+              </div>
+
+              <div 
+                className="absolute -bottom-4 left-1/4 glass-card p-4 rounded-2xl shadow-xl floating-icon z-20 border-white/20"
+                style={{ animationDelay: '0.8s' }}
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-purple-500/20 flex items-center justify-center text-purple-500">
+                    <span className="font-black">50+</span>
+                  </div>
+                  <div>
+                    <p className="text-[10px] text-slate-500 font-bold uppercase tracking-tighter">Finished</p>
+                    <p className="text-xs font-black dark:text-white">Projects</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Decorative Floating Dots */}
+              <div className="absolute top-10 right-10 w-4 h-4 bg-accent rounded-full animate-ping opacity-20"></div>
+              <div
+                className="absolute bottom-20 left-0 w-3 h-3 bg-primary rounded-full animate-bounce opacity-40"
+                style={{ animationDelay: "1s" }}
+              ></div>
+            </div>
           </div>
 
           {/* Content Side */}
-          <div className="space-y-10">
+          <div className="space-y-8">
             <div className="space-y-4">
-              <div className="inline-flex items-center px-3 py-1 bg-accent/10 border border-accent/20 rounded-lg">
-                <span className="text-[10px] font-black uppercase tracking-widest text-accent">
-                  About the Community
+              <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary hover:bg-primary/20 transition-colors cursor-default">
+                <span className="w-2 h-2 rounded-full bg-accent mr-2 animate-pulse"></span>
+                <span className="text-[10px] font-black uppercase tracking-[0.2em]">
+                  The Community
                 </span>
               </div>
-              <h2 className="text-4xl md:text-6xl font-black text-slate-900 dark:text-white leading-[1.1] tracking-tighter">
-                Accelerating <span className="text-primary">Digital</span>{" "}
-                Innovation.
+              <h2 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white leading-[1.1] tracking-tighter">
+                Mencetak{" "}
+                <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-purple-500">
+                  Generasi Unggul
+                </span>{" "}
+                <br />
+                di Bidang Teknologi
               </h2>
             </div>
 
-            <div className="space-y-6">
-              <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
-                iTech Poliban merupakan salah satu komunitas yang ada di
-                Politeknik Negeri Banjarmasin. Didirikan pada tanggal{" "}
-                <span className="text-slate-900 dark:text-white font-bold">
-                  8 Oktober 2021
-                </span>{" "}
-                dan diresmikan pada{" "}
-                <span className="text-slate-900 dark:text-white font-bold">
-                  25 Februari 2022
-                </span>
-                .
-              </p>
-              <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                Kami adalah wadah bagi mahasiswa yang memiliki passion dengan
-                dunia IT untuk belajar dan berkembang bersama. iTech Poliban
-                terbuka untuk semua prodi dan latar belakang, asalkan memiliki
-                niat dan kemauan untuk belajar.
+            <div className="glass-card p-8 rounded-3xl border-white/5 relative group hover:border-primary/20 transition-all duration-500 overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-3xl -mr-16 -mt-16 group-hover:bg-primary/10 transition-colors"></div>
+              <p className="text-slate-600 dark:text-slate-400 leading-relaxed font-medium relative z-10 text-lg">
+                iTech Poliban merupakan salah satu komunitas IT yang ada di
+                Politeknik Negeri Banjarmasin. Didirikan pada tanggal 8 Oktober
+                2021 dan diresmikan pada tanggal 25 Februari 2022.
+                <br />
+                <br />
+                Kami adalah wadah bagi mahasiswa yang memiliki passion di dunia
+                IT untuk belajar dan berkembang bersama, baik hardskill maupun
+                softskill. Kami terbuka untuk semua prodi tanpa latar belakang
+                IT sebelumnya.
               </p>
             </div>
 
-            {/* Feature Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid sm:grid-cols-3 gap-4">
               {[
-                {
-                  title: "Skill Development",
-                  desc: "Hardskill & Softskill focus",
-                },
-                { title: "Inclusive", desc: "Open for all students" },
-                { title: "Professional", desc: "Industry-standard skills" },
-                { title: "Community", desc: "Collaborative environment" },
-              ].map((item) => (
+                { label: "Hardskill", color: "bg-primary" },
+                { label: "Softskill", color: "bg-purple-500" },
+                { label: "Passion", color: "bg-accent" },
+              ].map((tag) => (
                 <div
-                  key={item.title}
-                  className="flex gap-4 p-4 rounded-2xl bg-slate-50 dark:bg-white/5 border border-slate-100 dark:border-white/10"
+                  key={tag.label}
+                  className="px-6 py-4 rounded-2xl bg-slate-100 dark:bg-white/5 border border-transparent hover:border-primary/30 transition-all text-center"
                 >
-                  <div className="shrink-0 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center">
-                    <HiCheck className="text-primary text-xs" />
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-bold text-slate-900 dark:text-white">
-                      {item.title}
-                    </h4>
-                    <p className="text-xs text-slate-500 dark:text-slate-400">
-                      {item.desc}
-                    </p>
-                  </div>
+                  <div
+                    className={`w-2 h-2 rounded-full ${tag.color} mx-auto mb-2`}
+                  ></div>
+                  <span className="text-sm font-bold dark:text-slate-300">
+                    {tag.label}
+                  </span>
                 </div>
               ))}
             </div>
 
-            <button
-              type="button"
-              className="px-8 py-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-bold rounded-2xl hover:scale-105 transition-transform shadow-lg"
-            >
-              Learn More
-            </button>
+            <div className="space-y-4 pt-4">
+              {[
+                "Pengembangan Skill Intensif",
+                "Komunitas Kolaboratif & Inovatif",
+                "Akses ke Jaringan Profesional IT",
+              ].map((item) => (
+                <div
+                  key={item}
+                  className="flex items-center gap-4 group/item hover:translate-x-2 transition-transform duration-300 cursor-default"
+                >
+                  <div className="bg-primary/20 p-2 rounded-xl group-hover/item:bg-primary/30 group-hover/item:scale-110 transition-all duration-300">
+                    <HiCheck className="text-primary text-sm shadow-sm" />
+                  </div>
+                  <p className="text-slate-700 dark:text-slate-300 font-bold tracking-tight group-hover/item:text-primary transition-colors">
+                    {item}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
