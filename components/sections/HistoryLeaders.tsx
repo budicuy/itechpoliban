@@ -6,7 +6,7 @@ export default function HistoryLeaders() {
       id: 1,
       name: "BUDIANNOR",
       role: "Ketua Umum",
-      period: "2024 - 2026",
+      period: "2024 - sekarang",
       image: "/placeholder-user.webp", // I'll use placeholders or just a div if image not found
       socials: { instagram: "#", linkedin: "#", github: "#" },
       color: "from-primary to-purple-600",
