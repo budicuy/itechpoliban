@@ -29,7 +29,7 @@ export default function Navbar() {
               fill
               priority
             />
-          </div>
+          </div>  
           <span className="text-xl font-extrabold tracking-tighter text-slate-900 dark:text-white uppercase">
             iTech<span className="text-accent">Poliban</span>
           </span>

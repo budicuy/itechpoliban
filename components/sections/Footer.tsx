@@ -11,7 +11,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-background-dark border-t border-white/5 pt-20 pb-10 relative overflow-hidden">
+    <footer className="bg-background-dark border-t border-white/5 pt-20 pb-10 relative overflow-hidden" id="kontak">
       {/* Background Decorative Element */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-px bg-linear-to-r from-transparent via-primary/50 to-transparent"></div>
       <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
@@ -27,11 +27,11 @@ export default function Footer() {
                   alt="iTech Logo"
                   fill
                   className="object-contain"
-                />
+              />
               </div>
               <div>
                 <h2 className="text-xl font-black text-white tracking-tighter uppercase leading-none">
-                  iTech <span className="text-accent">Poliban</span>
+                  iTech <span className="text-accent">Poliban</span>  
                 </h2>
                 <p className="text-[10px] text-primary font-bold uppercase tracking-[0.3em] mt-1">
                   Technology Community
