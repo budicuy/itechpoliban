@@ -143,12 +143,12 @@ export default function About() {
                 <p className="text-slate-600 dark:text-slate-400 leading-relaxed font-medium text-lg">
                   Kami adalah wadah bagi mahasiswa yang memiliki{" "}
                   <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-purple-500 font-extrabold italic">
-                    passion di dunia IT
+                    Passion di dunia IT
                   </span>{" "}
                   untuk belajar dan berkembang bersama, baik{" "}
-                  <span className="text-primary font-bold">hardskill</span> maupun{" "}
-                  <span className="text-purple-500 font-bold">softskill</span>. 
-                  Kami terbuka untuk <span className="text-slate-900 dark:text-white font-bold">semua prodi</span> tanpa latar belakang IT sebelumnya.
+                  <span className="text-primary font-bold">Hardskill</span> maupun{" "}
+                  <span className="text-purple-500 font-bold">Softskill</span>. 
+                  Kami terbuka untuk <span className="text-slate-900 dark:text-white font-bold">Semua Program Studi di Poliban</span> tanpa latar belakang IT sebelumnya.
                 </p>
               </div>
             </div>

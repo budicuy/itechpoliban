@@ -21,8 +21,7 @@ export default function VisiMisi() {
             Visi Kami
           </h4>
           <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-lg italic">
-            "Menjadi pusat unggulan inovasi teknologi informasi bagi mahasiswa
-            Poliban yang kompetitif secara global dan berintegritas tinggi."
+            “Meningkatkan Insan kreatif, Komunikatif, dan Religius sehingga dapat berkompetensi dan berkompetisi nasional dan internasional dibidang IT"
           </p>
         </div>
         <div className="bg-white dark:bg-background-dark p-10 rounded-2xl border border-primary/10 shadow-xl">
@@ -36,18 +35,22 @@ export default function VisiMisi() {
             {[
               {
                 num: "01.",
-                text: "Menyelenggarakan pelatihan IT yang relevan dengan tren industri.",
+                text: "Mewadahi kreatifitas mahasiswa di bidang IT.",
               },
               {
                 num: "02.",
-                text: "Mendorong partisipasi aktif dalam kompetisi teknologi nasional.",
+                text: "Mengkoordinir kegiatan kemahasiswaan yang bergerak di bidang IT.",
               },
               {
                 num: "03.",
-                text: "Menciptakan ekosistem riset dan pengembangan software yang solutif.",
+                text: "Mendorong mahasiswa untuk ikut berpartisipasi dalam kompetisi di bidang IT.",
+              },
+              {
+                num: "04.",
+                text: "Mendorong mahasiswa untuk mengembangkan teknologi dilingkungan kampus maupun masyarakat.",
               },
             ].map((misi) => (
-              <li key={misi.num} className="flex items-start gap-3">
+              <li key={misi.num} className="flex gap-3 items-center">
                 <span className="text-accent font-bold">{misi.num}</span>{" "}
                 {misi.text}
               </li>
