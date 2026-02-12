@@ -6,7 +6,7 @@ export default function Struktur() {
       id: 1,
       name: "BUDIANNOR",
       role: "Ketua Umum",
-      period: "2024 - 2025",
+      period: "2024 - 2026",
       image: "/placeholder-user.webp", // I'll use placeholders or just a div if image not found
       socials: { instagram: "#", linkedin: "#", github: "#" },
       color: "from-primary to-purple-600",
@@ -85,7 +85,7 @@ export default function Struktur() {
 
                 <div className="space-y-4">
                   <div>
-                    <div className="text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-1">{leader.period}</div>
+                    <div className="text-[10px] font-black text-primary uppercase tracking-[0.2em] mb-1">Periode {leader.period}</div>
                     <h3 className="text-2xl font-black text-white group-hover:text-accent transition-colors">{leader.name}</h3>
                     <p className="text-slate-400 font-bold leading-none mt-1">{leader.role}</p>
                   </div>
