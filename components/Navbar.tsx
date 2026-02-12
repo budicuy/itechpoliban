@@ -1,7 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
-import { HiBars3, HiBolt } from "react-icons/hi2";
+import { HiBars3 } from "react-icons/hi2";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -19,9 +20,15 @@ export default function Navbar() {
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? "glass-nav py-2" : "py-4"}`}
     >
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        <div className="flex items-center space-x-2">
-          <div className="w-10 h-10 bg-primary flex items-center justify-center rounded-lg shadow-lg shadow-primary/30">
-            <HiBolt className="text-white text-xl" />
+        <div className="flex items-center space-x-3">
+          <div className="relative w-10 h-10">
+            <Image
+              alt="iTech Poliban Logo"
+              className="object-contain"
+              src="/logo-itech.svg"
+              fill
+              priority
+            />
           </div>
           <span className="text-xl font-extrabold tracking-tighter text-slate-900 dark:text-white uppercase">
             iTech<span className="text-accent">Poliban</span>
