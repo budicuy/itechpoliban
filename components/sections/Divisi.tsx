@@ -145,14 +145,14 @@ export default function Divisi() {
               ></div>
 
               {/* Background Number */}
-              <span className="absolute -bottom-4 -right-2 text-9xl font-black text-white/5 md:text-white/[0.03] select-none group-hover:md:text-white/[0.05] transition-colors duration-700">
+              <span className="absolute -bottom-4 -right-2 text-9xl font-black text-white/5 md:text-white/3 select-none group-hover:md:text-white/5 transition-colors duration-700">
                 0{div.id}
               </span>
 
               <div className="relative z-10">
                 <div className="flex items-center justify-between mb-8">
                   <div
-                    className={`w-16 h-16 rounded-[1.5rem] ${div.bg} flex items-center justify-center border border-white/20 md:border-white/5 group-hover:md:border-white/10 scale-110 md:scale-100 group-hover:md:scale-110 md:group-hover:rotate-6 transition-all duration-500 shadow-inner`}
+                    className={`w-16 h-16 rounded-3xl ${div.bg} flex items-center justify-center border border-white/20 md:border-white/5 group-hover:md:border-white/10 scale-110 md:scale-100 group-hover:md:scale-110 md:group-hover:rotate-6 transition-all duration-500 shadow-inner`}
                   >
                     <div.icon
                       className={`text-3xl ${div.iconColor} drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]`}
@@ -187,7 +187,7 @@ export default function Divisi() {
           <div className="md:col-span-2 lg:col-span-1 group perspective-1000">
             <div className="relative h-full overflow-hidden rounded-[3rem] p-1 shadow-2xl transition-all duration-700 group-hover:scale-[1.02]">
               {/* Moving Gradient Background */}
-              <div className="absolute inset-0 bg-linear-to-br from-primary via-purple-600 to-accent animate-[gradient_8s_ease_infinite] bg-[length:400%_400%]"></div>
+              <div className="absolute inset-0 bg-linear-to-br from-primary via-purple-600 to-accent animate-[gradient_8s_ease_infinite] bg-size-[400%_400%]"></div>
 
               <div className="relative h-full bg-slate-950/90 backdrop-blur-xl rounded-[2.9rem] p-10 flex flex-col items-center justify-center text-center space-y-6 overflow-hidden">
                 <div className="absolute inset-0 bg-dotted-grid-bg opacity-20 group-hover:opacity-40 transition-opacity"></div>

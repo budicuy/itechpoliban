@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id" className="dark">
+    <html lang="id" className="dark scroll-smooth">
       <body
         className={`${manrope.variable} antialiased selection:bg-primary/30 selection:text-white`}
       >
