@@ -126,38 +126,38 @@ export default function Divisi() {
           {divisions.map((div) => (
             <div
               key={div.id}
-              className={`group relative glass-card p-10 rounded-[3rem] border-white/5 ${div.border} transition-all duration-700 hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)] cursor-default overflow-hidden`}
+              className={`group relative glass-card p-10 rounded-[3rem] border-white/10 md:border-white/5 ${div.border} transition-all duration-700 hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)] cursor-default overflow-hidden`}
             >
               {/* Animated Corner Highlight - Fixed to follow border radius */}
-              <div className={`absolute top-0 right-0 w-[3px] h-0 bg-linear-to-b ${div.color} group-hover:h-32 transition-all duration-700 z-30 rounded-full`}></div>
-              <div className={`absolute top-0 right-0 w-0 h-[3px] bg-linear-to-l ${div.color} group-hover:w-32 transition-all duration-700 z-30 rounded-full`}></div>
+              <div className={`absolute top-0 right-0 w-[3px] h-20 md:h-0 bg-linear-to-b ${div.color} group-hover:md:h-32 transition-all duration-700 z-30 rounded-full`}></div>
+              <div className={`absolute top-0 right-0 w-20 md:w-0 h-[3px] bg-linear-to-l ${div.color} group-hover:md:w-32 transition-all duration-700 z-30 rounded-full`}></div>
 
               {/* Background Number */}
-              <span className="absolute -bottom-4 -right-2 text-9xl font-black text-white/[0.03] select-none group-hover:text-white/[0.05] transition-colors duration-700">
+              <span className="absolute -bottom-4 -right-2 text-9xl font-black text-white/5 md:text-white/[0.03] select-none group-hover:md:text-white/[0.05] transition-colors duration-700">
                 0{div.id}
               </span>
 
               <div className="relative z-10">
                 <div className="flex items-center justify-between mb-8">
-                  <div className={`w-16 h-16 rounded-[1.5rem] ${div.bg} flex items-center justify-center border border-white/5 group-hover:border-white/10 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-inner`}>
+                  <div className={`w-16 h-16 rounded-[1.5rem] ${div.bg} flex items-center justify-center border border-white/20 md:border-white/5 group-hover:md:border-white/10 scale-110 md:scale-100 group-hover:md:scale-110 md:group-hover:rotate-6 transition-all duration-500 shadow-inner`}>
                     <div.icon className={`text-3xl ${div.iconColor} drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]`} />
                   </div>
-                  <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[8px] font-black uppercase tracking-widest text-slate-400 group-hover:text-white transition-colors">
+                  <span className="px-3 py-1 rounded-full bg-white/10 md:bg-white/5 border border-white/20 md:border-white/10 text-[8px] font-black uppercase tracking-widest text-white md:text-slate-400 group-hover:md:text-white transition-colors">
                     {div.tag}
                   </span>
                 </div>
 
-                <h3 className="text-2xl font-black text-white mb-4 tracking-tight group-hover:text-accent transition-colors duration-500">
+                <h3 className="text-2xl font-black text-accent md:text-white mb-4 tracking-tight group-hover:md:text-accent transition-colors duration-500">
                   {div.name}
                 </h3>
                 
-                <p className="text-slate-400 text-sm leading-relaxed font-medium group-hover:text-slate-200 transition-colors duration-500 pr-4">
+                <p className="text-slate-300 md:text-slate-400 text-sm leading-relaxed font-medium group-hover:md:text-slate-200 transition-colors duration-500 pr-4">
                   {div.description}
                 </p>
 
                 <div className="mt-10 flex items-center gap-3 overflow-hidden">
-                  <div className={`h-px w-8 bg-linear-to-r ${div.color} group-hover:w-16 transition-all duration-500`}></div>
-                  <span className="text-[10px] font-black uppercase tracking-widest text-primary group-hover:text-white whitespace-nowrap translate-x-[-10px] opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-500">
+                  <div className={`h-px w-16 md:w-8 bg-linear-to-r ${div.color} group-hover:md:w-16 transition-all duration-500`}></div>
+                  <span className="text-[10px] font-black uppercase tracking-widest text-white md:text-primary md:opacity-0 md:translate-x-[-10px] group-hover:md:opacity-100 group-hover:md:translate-x-0 transition-all duration-500">
                     Learn More
                   </span>
                 </div>
@@ -175,7 +175,7 @@ export default function Divisi() {
                 <div className="absolute inset-0 bg-dotted-grid-bg opacity-20 group-hover:opacity-40 transition-opacity"></div>
                 
                 <div className="relative z-10 space-y-6">
-                  <div className="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mx-auto border border-white/20 animate-bounce">
+                  <div className="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mx-auto border border-white/20">
                     <MdRocketLaunch className="text-4xl text-white" />
                   </div>
                   <div>
