@@ -1,13 +1,13 @@
 import {
-  MdSecurity,
   MdAnimation,
+  MdBrush,
+  MdBusinessCenter,
+  MdChevronRight,
   MdCode,
   MdGamepad,
   MdMemory,
-  MdBrush,
-  MdBusinessCenter,
   MdRocketLaunch,
-  MdChevronRight,
+  MdSecurity,
 } from "react-icons/md";
 
 export default function Divisi() {
@@ -99,7 +99,10 @@ export default function Divisi() {
   ];
 
   return (
-    <section className="py-20 lg:py-32 bg-background-dark relative overflow-hidden" id="divisi">
+    <section
+      className="py-20 lg:py-32 bg-background-dark relative overflow-hidden"
+      id="divisi"
+    >
       {/* Dynamic Background */}
       <div className="absolute top-0 inset-x-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent"></div>
       <div className="absolute top-1/3 left-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[150px] -ml-[300px]"></div>
@@ -110,15 +113,20 @@ export default function Divisi() {
           <div className="space-y-4 max-w-2xl">
             <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary">
               <span className="w-1.5 h-1.5 rounded-full bg-accent mr-2"></span>
-              <span className="text-[10px] font-black uppercase tracking-[0.2em]">Our Specializations</span>
+              <span className="text-[10px] font-black uppercase tracking-[0.2em]">
+                Our Specializations
+              </span>
             </div>
             <h2 className="text-4xl md:text-6xl font-black text-white leading-tight tracking-tight">
               Kuasai Ilmu, <br />
-              <span className="text-transparent bg-clip-text bg-linear-to-r from-primary via-purple-400 to-accent">Wujudkan Masa Depan</span>
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-primary via-purple-400 to-accent">
+                Wujudkan Masa Depan
+              </span>
             </h2>
           </div>
           <p className="text-slate-400 max-w-sm font-medium text-lg leading-relaxed border-l-2 border-primary/30 pl-6 hidden md:block">
-            Pilih jalur spesialisasimu dan kembangkan talenta di lingkungan yang tepat.
+            Pilih jalur spesialisasimu dan kembangkan talenta di lingkungan yang
+            tepat.
           </p>
         </div>
 
@@ -129,8 +137,12 @@ export default function Divisi() {
               className={`group relative glass-card p-10 rounded-[3rem] border-white/10 md:border-white/5 ${div.border} transition-all duration-700 hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)] cursor-default overflow-hidden`}
             >
               {/* Animated Corner Highlight - Fixed to follow border radius */}
-              <div className={`absolute top-0 right-0 w-[3px] h-20 md:h-0 bg-linear-to-b ${div.color} group-hover:md:h-32 transition-all duration-700 z-30 rounded-full`}></div>
-              <div className={`absolute top-0 right-0 w-20 md:w-0 h-[3px] bg-linear-to-l ${div.color} group-hover:md:w-32 transition-all duration-700 z-30 rounded-full`}></div>
+              <div
+                className={`absolute top-0 right-0 w-[3px] h-20 md:h-0 bg-linear-to-b ${div.color} group-hover:md:h-32 transition-all duration-700 z-30 rounded-full`}
+              ></div>
+              <div
+                className={`absolute top-0 right-0 w-20 md:w-0 h-[3px] bg-linear-to-l ${div.color} group-hover:md:w-32 transition-all duration-700 z-30 rounded-full`}
+              ></div>
 
               {/* Background Number */}
               <span className="absolute -bottom-4 -right-2 text-9xl font-black text-white/5 md:text-white/[0.03] select-none group-hover:md:text-white/[0.05] transition-colors duration-700">
@@ -139,8 +151,12 @@ export default function Divisi() {
 
               <div className="relative z-10">
                 <div className="flex items-center justify-between mb-8">
-                  <div className={`w-16 h-16 rounded-[1.5rem] ${div.bg} flex items-center justify-center border border-white/20 md:border-white/5 group-hover:md:border-white/10 scale-110 md:scale-100 group-hover:md:scale-110 md:group-hover:rotate-6 transition-all duration-500 shadow-inner`}>
-                    <div.icon className={`text-3xl ${div.iconColor} drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]`} />
+                  <div
+                    className={`w-16 h-16 rounded-[1.5rem] ${div.bg} flex items-center justify-center border border-white/20 md:border-white/5 group-hover:md:border-white/10 scale-110 md:scale-100 group-hover:md:scale-110 md:group-hover:rotate-6 transition-all duration-500 shadow-inner`}
+                  >
+                    <div.icon
+                      className={`text-3xl ${div.iconColor} drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]`}
+                    />
                   </div>
                   <span className="px-3 py-1 rounded-full bg-white/10 md:bg-white/5 border border-white/20 md:border-white/10 text-[8px] font-black uppercase tracking-widest text-white md:text-slate-400 group-hover:md:text-white transition-colors">
                     {div.tag}
@@ -150,13 +166,15 @@ export default function Divisi() {
                 <h3 className="text-2xl font-black text-accent md:text-white mb-4 tracking-tight group-hover:md:text-accent transition-colors duration-500">
                   {div.name}
                 </h3>
-                
+
                 <p className="text-slate-300 md:text-slate-400 text-sm leading-relaxed font-medium group-hover:md:text-slate-200 transition-colors duration-500 pr-4">
                   {div.description}
                 </p>
 
                 <div className="mt-10 flex items-center gap-3 overflow-hidden">
-                  <div className={`h-px w-16 md:w-8 bg-linear-to-r ${div.color} group-hover:md:w-16 transition-all duration-500`}></div>
+                  <div
+                    className={`h-px w-16 md:w-8 bg-linear-to-r ${div.color} group-hover:md:w-16 transition-all duration-500`}
+                  ></div>
                   <span className="text-[10px] font-black uppercase tracking-widest text-white md:text-primary md:opacity-0 md:translate-x-[-10px] group-hover:md:opacity-100 group-hover:md:translate-x-0 transition-all duration-500">
                     Learn More
                   </span>
@@ -164,27 +182,34 @@ export default function Divisi() {
               </div>
             </div>
           ))}
-          
+
           {/* CTA Card - The "Mantap" part */}
           <div className="md:col-span-2 lg:col-span-1 group perspective-1000">
             <div className="relative h-full overflow-hidden rounded-[3rem] p-1 shadow-2xl transition-all duration-700 group-hover:scale-[1.02]">
               {/* Moving Gradient Background */}
               <div className="absolute inset-0 bg-linear-to-br from-primary via-purple-600 to-accent animate-[gradient_8s_ease_infinite] bg-[length:400%_400%]"></div>
-              
+
               <div className="relative h-full bg-slate-950/90 backdrop-blur-xl rounded-[2.9rem] p-10 flex flex-col items-center justify-center text-center space-y-6 overflow-hidden">
                 <div className="absolute inset-0 bg-dotted-grid-bg opacity-20 group-hover:opacity-40 transition-opacity"></div>
-                
+
                 <div className="relative z-10 space-y-6">
                   <div className="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mx-auto border border-white/20">
                     <MdRocketLaunch className="text-4xl text-white" />
                   </div>
                   <div>
-                    <h3 className="text-3xl font-black text-white leading-tight">Siap Untuk <br />Bergabung?</h3>
+                    <h3 className="text-3xl font-black text-white leading-tight">
+                      Siap Untuk <br />
+                      Bergabung?
+                    </h3>
                     <p className="text-white/60 text-sm font-medium mt-3 px-4">
-                      Jadilah bagian dari generasi teknologi berikutnya bersama Poliban.
+                      Jadilah bagian dari generasi teknologi berikutnya bersama
+                      Poliban.
                     </p>
                   </div>
-                  <button type="button" className="group/btn relative px-8 py-4 bg-white text-slate-900 rounded-full font-black text-sm uppercase tracking-widest hover:bg-accent transition-all duration-300 shadow-[0_10px_30px_rgba(255,255,255,0.2)] flex items-center gap-2 mx-auto">
+                  <button
+                    type="button"
+                    className="group/btn relative px-8 py-4 bg-white text-slate-900 rounded-full font-black text-sm uppercase tracking-widest hover:bg-accent transition-all duration-300 shadow-[0_10px_30px_rgba(255,255,255,0.2)] flex items-center gap-2 mx-auto"
+                  >
                     Daftar Sekarang
                     <MdChevronRight className="text-xl group-hover/btn:translate-x-1 transition-transform" />
                   </button>

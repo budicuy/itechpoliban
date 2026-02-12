@@ -7,7 +7,6 @@ export default function About() {
       className="py-16 lg:py-32 bg-background-dark relative overflow-hidden"
       id="about"
     >
-
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           {/* Visual Element with Logo - Order 2 on mobile, 1 on desktop */}
@@ -64,7 +63,9 @@ export default function About() {
               >
                 <div className="flex items-center gap-2 sm:gap-3">
                   <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-accent/20 flex items-center justify-center text-accent">
-                    <span className="text-xs sm:text-base font-black">100+</span>
+                    <span className="text-xs sm:text-base font-black">
+                      100+
+                    </span>
                   </div>
                   <div>
                     <p className="text-[8px] sm:text-[10px] text-slate-500 font-bold uppercase tracking-tighter">
@@ -127,28 +128,44 @@ export default function About() {
               {/* Background Glows */}
               <div className="absolute top-0 right-0 w-48 h-48 bg-primary/10 rounded-full blur-3xl -mr-24 -mt-24 group-hover:bg-primary/20 transition-all duration-700"></div>
               <div className="absolute bottom-0 left-0 w-32 h-32 bg-accent/5 rounded-full blur-3xl -ml-16 -mb-16 group-hover:bg-accent/10 transition-all duration-700"></div>
-              
+
               <div className="relative z-10">
                 <p className="text-slate-600 dark:text-slate-400 leading-relaxed font-medium text-lg">
-                  <span className="text-primary dark:text-primary font-bold">iTech Poliban</span> merupakan salah satu{" "}
-                  <span className="text-slate-900 dark:text-white font-bold bg-white/5 px-2 py-0.5 rounded-lg border border-white/10">komunitas IT</span>{" "}
-                  yang ada di Politeknik Negeri Banjarmasin. Didirikan pada tanggal{" "}
-                  <span className="text-accent font-bold decoration-accent/30 underline decoration-2 underline-offset-4">8 Oktober 2021</span>{" "}
+                  <span className="text-primary dark:text-primary font-bold">
+                    iTech Poliban
+                  </span>{" "}
+                  merupakan salah satu{" "}
+                  <span className="text-slate-900 dark:text-white font-bold bg-white/5 px-2 py-0.5 rounded-lg border border-white/10">
+                    komunitas IT
+                  </span>{" "}
+                  yang ada di Politeknik Negeri Banjarmasin. Didirikan pada
+                  tanggal{" "}
+                  <span className="text-accent font-bold decoration-accent/30 underline decoration-2 underline-offset-4">
+                    8 Oktober 2021
+                  </span>{" "}
                   dan diresmikan pada tanggal{" "}
-                  <span className="text-accent font-bold decoration-accent/30 underline decoration-2 underline-offset-4">25 Februari 2022</span>.
+                  <span className="text-accent font-bold decoration-accent/30 underline decoration-2 underline-offset-4">
+                    25 Februari 2022
+                  </span>
+                  .
                 </p>
-                
+
                 <div className="my-6 h-px w-full bg-linear-to-r from-transparent via-white/10 to-transparent"></div>
-                
+
                 <p className="text-slate-600 dark:text-slate-400 leading-relaxed font-medium text-lg">
                   Kami adalah wadah bagi mahasiswa yang memiliki{" "}
                   <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-purple-500 font-extrabold italic">
                     Passion di dunia IT
                   </span>{" "}
                   untuk belajar dan berkembang bersama, baik{" "}
-                  <span className="text-primary font-bold">Hardskill</span> maupun{" "}
-                  <span className="text-purple-500 font-bold">Softskill</span>. 
-                  Kami terbuka untuk <span className="text-slate-900 dark:text-white font-bold">Semua Program Studi di Poliban</span> tanpa latar belakang IT sebelumnya.
+                  <span className="text-primary font-bold">Hardskill</span>{" "}
+                  maupun{" "}
+                  <span className="text-purple-500 font-bold">Softskill</span>.
+                  Kami terbuka untuk{" "}
+                  <span className="text-slate-900 dark:text-white font-bold">
+                    Semua Program Studi di Poliban
+                  </span>{" "}
+                  tanpa latar belakang IT sebelumnya.
                 </p>
               </div>
             </div>
