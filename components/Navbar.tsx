@@ -61,9 +61,9 @@ export default function Navbar() {
           </a>
           <a
             className="text-sm font-medium hover:text-accent transition-colors"
-            href="#struktur"
+            href="#history-leaders"
           >
-            Struktur
+            History
           </a>
           <a
             className="px-5 py-2 bg-primary hover:bg-primary/80 text-white rounded-lg text-sm font-semibold transition-all shadow-lg shadow-primary/20"

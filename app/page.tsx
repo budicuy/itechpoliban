@@ -3,8 +3,8 @@ import About from "@/components/sections/About";
 import Divisi from "@/components/sections/Divisi";
 import Footer from "@/components/sections/Footer";
 import Hero from "@/components/sections/Hero";
+import HistoryLeaders from "@/components/sections/HistoryLeaders";
 import Prestasi from "@/components/sections/Prestasi";
-import Struktur from "@/components/sections/Struktur";
 import VisiMisi from "@/components/sections/VisiMisi";
 
 export default function Home() {
@@ -16,7 +16,7 @@ export default function Home() {
       <VisiMisi />
       <Divisi />
       <Prestasi />
-      <Struktur />
+      <HistoryLeaders />
       <Footer />
     </main>
   );
