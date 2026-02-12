@@ -1,18 +1,12 @@
 import Image from "next/image";
-import { HiCheck } from "react-icons/hi2";
+import { FaBrain, FaCode, FaReact } from "react-icons/fa";
 
 export default function About() {
   return (
     <section
-      className="py-16 lg:py-32 bg-background-light dark:bg-background-dark relative overflow-hidden"
+      className="py-16 lg:py-32 bg-background-dark relative overflow-hidden"
       id="about"
     >
-      {/* Background Decorative Elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-0 w-full h-full dotted-grid-bg opacity-30"></div>
-        <div className="absolute -top-24 -left-24 w-96 h-96 bg-primary/10 rounded-full blur-[100px] animate-pulse"></div>
-        <div className="absolute -bottom-24 -right-24 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[100px]"></div>
-      </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
@@ -144,42 +138,46 @@ export default function About() {
               </p>
             </div>
 
-            <div className="grid sm:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
               {[
-                { label: "Hardskill", color: "bg-primary" },
-                { label: "Softskill", color: "bg-purple-500" },
-                { label: "Passion", color: "bg-accent" },
-              ].map((tag) => (
-                <div
-                  key={tag.label}
-                  className="px-6 py-4 rounded-2xl bg-slate-100 dark:bg-white/5 border border-transparent hover:border-primary/30 transition-all text-center"
-                >
-                  <div
-                    className={`w-2 h-2 rounded-full ${tag.color} mx-auto mb-2`}
-                  ></div>
-                  <span className="text-sm font-bold dark:text-slate-300">
-                    {tag.label}
-                  </span>
-                </div>
-              ))}
-            </div>
-
-            <div className="space-y-4 pt-4">
-              {[
-                "Pengembangan Skill Intensif",
-                "Komunitas Kolaboratif & Inovatif",
-                "Akses ke Jaringan Profesional IT",
+                {
+                  label: "Hardskill",
+                  icon: <FaCode className="text-xl" />,
+                  color: "bg-primary/20 text-primary",
+                  desc: "Skill Intensif",
+                },
+                {
+                  label: "Softskill",
+                  icon: <FaBrain className="text-xl" />,
+                  color: "bg-purple-500/20 text-purple-500",
+                  desc: "Kolaborasi",
+                },
+                {
+                  label: "Passion",
+                  icon: (
+                    <FaReact className="text-xl animate-[spin_8s_linear_infinite]" />
+                  ),
+                  color: "bg-accent/20 text-accent",
+                  desc: "Jaringan IT",
+                },
               ].map((item) => (
                 <div
-                  key={item}
-                  className="flex items-center gap-4 group/item hover:translate-x-2 transition-transform duration-300 cursor-default"
+                  key={item.label}
+                  className="group/card p-4 rounded-2xl bg-slate-100 dark:bg-white/5 border border-transparent hover:border-primary/30 transition-all flex flex-col items-center text-center space-y-3 cursor-default"
                 >
-                  <div className="bg-primary/20 p-2 rounded-xl group-hover/item:bg-primary/30 group-hover/item:scale-110 transition-all duration-300">
-                    <HiCheck className="text-primary text-sm shadow-sm" />
+                  <div
+                    className={`w-12 h-12 rounded-xl ${item.color} flex items-center justify-center group-hover/card:scale-110 group-hover/card:rotate-6 transition-all duration-300`}
+                  >
+                    {item.icon}
                   </div>
-                  <p className="text-slate-700 dark:text-slate-300 font-bold tracking-tight group-hover/item:text-primary transition-colors">
-                    {item}
-                  </p>
+                  <div>
+                    <h4 className="text-xs font-black dark:text-white uppercase tracking-tighter">
+                      {item.label}
+                    </h4>
+                    <p className="text-[10px] text-slate-500 dark:text-slate-400 font-bold leading-tight mt-1">
+                      {item.desc}
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>
