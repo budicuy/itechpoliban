@@ -139,7 +139,7 @@ export default function VisiMisi() {
                     >
                       {activeMisi === idx && (
                         <div
-                          className="absolute inset-0 bg-accent transition-all duration-[5000ms] linear h-full"
+                          className="absolute inset-0 bg-accent transition-all duration-5000 linear h-full"
                           style={{ width: "100%" }}
                         ></div>
                       )}

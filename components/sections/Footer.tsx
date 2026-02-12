@@ -100,8 +100,8 @@ export default function Footer() {
                   icon: FaLocationDot,
                   text: "Gedung TI Lt. 2, Poliban, Banjarmasin, Kalimantan Selatan",
                 },
-              ].map((item, idx) => (
-                <div key={idx} className="flex items-start gap-4 group">
+              ].map((item) => (
+                <div key={item.text} className="flex items-start gap-4 group">
                   <div className="w-10 h-10 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all shrink-0">
                     <item.icon />
                   </div>
