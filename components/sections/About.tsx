@@ -40,18 +40,18 @@ export default function About() {
 
               {/* Floating Stat Badges */}
               <div
-                className="absolute -top-4 -left-4 glass-card p-4 rounded-2xl shadow-xl floating-icon z-20 border-white/20"
+                className="absolute -top-4 -left-2 sm:-left-4 glass-card p-3 sm:p-4 rounded-xl sm:rounded-2xl shadow-xl floating-icon z-20 border-white/20 scale-90 sm:scale-100"
                 style={{ animationDelay: "0s" }}
               >
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center text-primary">
-                    <span className="font-black">3+</span>
+                <div className="flex items-center gap-2 sm:gap-3">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-primary/20 flex items-center justify-center text-primary">
+                    <span className="text-xs sm:text-base font-black">3+</span>
                   </div>
                   <div>
-                    <p className="text-[10px] text-slate-500 font-bold uppercase tracking-tighter">
+                    <p className="text-[8px] sm:text-[10px] text-slate-500 font-bold uppercase tracking-tighter">
                       Years of
                     </p>
-                    <p className="text-xs font-black dark:text-white">
+                    <p className="text-[10px] sm:text-xs font-black dark:text-white">
                       Experience
                     </p>
                   </div>
@@ -59,18 +59,18 @@ export default function About() {
               </div>
 
               <div
-                className="absolute top-1/2 -right-8 glass-card p-4 rounded-2xl shadow-xl floating-icon z-20 border-white/20"
+                className="absolute top-1/2 -right-4 sm:-right-8 glass-card p-3 sm:p-4 rounded-xl sm:rounded-2xl shadow-xl floating-icon z-20 border-white/20 scale-90 sm:scale-100"
                 style={{ animationDelay: "1.5s" }}
               >
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-accent/20 flex items-center justify-center text-accent">
-                    <span className="font-black">100+</span>
+                <div className="flex items-center gap-2 sm:gap-3">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-accent/20 flex items-center justify-center text-accent">
+                    <span className="text-xs sm:text-base font-black">100+</span>
                   </div>
                   <div>
-                    <p className="text-[10px] text-slate-500 font-bold uppercase tracking-tighter">
+                    <p className="text-[8px] sm:text-[10px] text-slate-500 font-bold uppercase tracking-tighter">
                       Active
                     </p>
-                    <p className="text-xs font-black dark:text-white">
+                    <p className="text-[10px] sm:text-xs font-black dark:text-white">
                       Members
                     </p>
                   </div>
@@ -78,18 +78,18 @@ export default function About() {
               </div>
 
               <div
-                className="absolute -bottom-4 left-1/4 glass-card p-4 rounded-2xl shadow-xl floating-icon z-20 border-white/20"
+                className="absolute -bottom-4 left-1/4 glass-card p-3 sm:p-4 rounded-xl sm:rounded-2xl shadow-xl floating-icon z-20 border-white/20 scale-90 sm:scale-100"
                 style={{ animationDelay: "0.8s" }}
               >
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-purple-500/20 flex items-center justify-center text-purple-500">
-                    <span className="font-black">50+</span>
+                <div className="flex items-center gap-2 sm:gap-3">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-purple-500/20 flex items-center justify-center text-purple-500">
+                    <span className="text-xs sm:text-base font-black">50+</span>
                   </div>
                   <div>
-                    <p className="text-[10px] text-slate-500 font-bold uppercase tracking-tighter">
+                    <p className="text-[8px] sm:text-[10px] text-slate-500 font-bold uppercase tracking-tighter">
                       Finished
                     </p>
-                    <p className="text-xs font-black dark:text-white">
+                    <p className="text-[10px] sm:text-xs font-black dark:text-white">
                       Projects
                     </p>
                   </div>
@@ -123,22 +123,37 @@ export default function About() {
               </h2>
             </div>
 
-            <div className="glass-card p-8 rounded-3xl border-white/5 relative group hover:border-primary/20 transition-all duration-500 overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-3xl -mr-16 -mt-16 group-hover:bg-primary/10 transition-colors"></div>
-              <p className="text-slate-600 dark:text-slate-400 leading-relaxed font-medium relative z-10 text-lg">
-                iTech Poliban merupakan salah satu komunitas IT yang ada di
-                Politeknik Negeri Banjarmasin. Didirikan pada tanggal 8 Oktober
-                2021 dan diresmikan pada tanggal 25 Februari 2022.
-                <br />
-                <br />
-                Kami adalah wadah bagi mahasiswa yang memiliki passion di dunia
-                IT untuk belajar dan berkembang bersama, baik hardskill maupun
-                softskill. Kami terbuka untuk semua prodi tanpa latar belakang
-                IT sebelumnya.
-              </p>
+            <div className="glass-card p-8 rounded-3xl border-white/5 relative group hover:border-primary/30 transition-all duration-500 overflow-hidden bg-linear-to-br from-white/5 via-transparent to-primary/5">
+              {/* Background Glows */}
+              <div className="absolute top-0 right-0 w-48 h-48 bg-primary/10 rounded-full blur-3xl -mr-24 -mt-24 group-hover:bg-primary/20 transition-all duration-700"></div>
+              <div className="absolute bottom-0 left-0 w-32 h-32 bg-accent/5 rounded-full blur-3xl -ml-16 -mb-16 group-hover:bg-accent/10 transition-all duration-700"></div>
+              
+              <div className="relative z-10">
+                <p className="text-slate-600 dark:text-slate-400 leading-relaxed font-medium text-lg">
+                  <span className="text-primary dark:text-primary font-bold">iTech Poliban</span> merupakan salah satu{" "}
+                  <span className="text-slate-900 dark:text-white font-bold bg-white/5 px-2 py-0.5 rounded-lg border border-white/10">komunitas IT</span>{" "}
+                  yang ada di Politeknik Negeri Banjarmasin. Didirikan pada tanggal{" "}
+                  <span className="text-accent font-bold decoration-accent/30 underline decoration-2 underline-offset-4">8 Oktober 2021</span>{" "}
+                  dan diresmikan pada tanggal{" "}
+                  <span className="text-accent font-bold decoration-accent/30 underline decoration-2 underline-offset-4">25 Februari 2022</span>.
+                </p>
+                
+                <div className="my-6 h-px w-full bg-linear-to-r from-transparent via-white/10 to-transparent"></div>
+                
+                <p className="text-slate-600 dark:text-slate-400 leading-relaxed font-medium text-lg">
+                  Kami adalah wadah bagi mahasiswa yang memiliki{" "}
+                  <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-purple-500 font-extrabold italic">
+                    passion di dunia IT
+                  </span>{" "}
+                  untuk belajar dan berkembang bersama, baik{" "}
+                  <span className="text-primary font-bold">hardskill</span> maupun{" "}
+                  <span className="text-purple-500 font-bold">softskill</span>. 
+                  Kami terbuka untuk <span className="text-slate-900 dark:text-white font-bold">semua prodi</span> tanpa latar belakang IT sebelumnya.
+                </p>
+              </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+            <div className="grid grid-cols-3 gap-3 pt-4">
               {[
                 {
                   label: "Hardskill",
@@ -163,18 +178,18 @@ export default function About() {
               ].map((item) => (
                 <div
                   key={item.label}
-                  className="group/card p-4 rounded-2xl bg-slate-100 dark:bg-white/5 border border-transparent hover:border-primary/30 transition-all flex flex-col items-center text-center space-y-3 cursor-default"
+                  className="group/card p-3 sm:p-4 rounded-2xl bg-slate-100 dark:bg-white/5 border border-transparent hover:border-primary/30 transition-all flex flex-col items-center text-center space-y-2 sm:space-y-3 cursor-default"
                 >
                   <div
-                    className={`w-12 h-12 rounded-xl ${item.color} flex items-center justify-center group-hover/card:scale-110 group-hover/card:rotate-6 transition-all duration-300`}
+                    className={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl ${item.color} flex items-center justify-center group-hover/card:scale-110 group-hover/card:rotate-6 transition-all duration-300`}
                   >
                     {item.icon}
                   </div>
                   <div>
-                    <h4 className="text-xs font-black dark:text-white uppercase tracking-tighter">
+                    <h4 className="text-[10px] sm:text-xs font-black dark:text-white uppercase tracking-tighter">
                       {item.label}
                     </h4>
-                    <p className="text-[10px] text-slate-500 dark:text-slate-400 font-bold leading-tight mt-1">
+                    <p className="hidden sm:block text-[10px] text-slate-500 dark:text-slate-400 font-bold leading-tight mt-1">
                       {item.desc}
                     </p>
                   </div>
