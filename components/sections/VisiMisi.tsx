@@ -1,3 +1,5 @@
+import { MdVisibility, MdRocketLaunch } from "react-icons/md";
+
 export default function VisiMisi() {
   return (
     <section
@@ -13,7 +15,7 @@ export default function VisiMisi() {
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8">
         <div className="bg-white dark:bg-background-dark p-10 rounded-2xl border border-primary/10 shadow-xl">
           <div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center text-white mb-6 shadow-lg shadow-primary/20">
-            <span className="material-icons text-3xl">visibility</span>
+            <MdVisibility className="text-3xl" />
           </div>
           <h4 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">
             Visi Kami
@@ -25,7 +27,7 @@ export default function VisiMisi() {
         </div>
         <div className="bg-white dark:bg-background-dark p-10 rounded-2xl border border-primary/10 shadow-xl">
           <div className="w-14 h-14 bg-accent rounded-xl flex items-center justify-center text-slate-900 mb-6 shadow-lg shadow-accent/20">
-            <span className="material-icons text-3xl">rocket_launch</span>
+            <MdRocketLaunch className="text-3xl" />
           </div>
           <h4 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">
             Misi Kami

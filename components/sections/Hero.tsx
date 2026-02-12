@@ -1,4 +1,16 @@
 import Image from "next/image";
+import {
+  MdArrowForward,
+  MdCode,
+  MdDeveloperMode,
+  MdOutlineSettingsEthernet,
+  MdShield,
+  MdMemory,
+  MdTerminal,
+  MdStorage,
+  MdSettingsInputComponent,
+  MdSync,
+} from "react-icons/md";
 
 export default function Hero() {
   return (
@@ -34,9 +46,7 @@ export default function Hero() {
               className="px-10 py-5 bg-primary hover:bg-primary/90 text-white font-bold rounded-2xl flex items-center group transition-all shadow-xl shadow-primary/20"
             >
               Jelajahi Sekarang
-              <span className="material-icons ml-3 group-hover:translate-x-2 transition-transform">
-                east
-              </span>
+              <MdArrowForward className="ml-3 text-xl group-hover:translate-x-2 transition-transform" />
             </button>
             <button
               type="button"
@@ -50,14 +60,10 @@ export default function Hero() {
               Core Expertise:
             </span>
             <div className="flex gap-4">
-              <span className="material-symbols-outlined text-2xl">code</span>
-              <span className="material-symbols-outlined text-2xl">
-                developer_mode_tv
-              </span>
-              <span className="material-symbols-outlined text-2xl">
-                settings_ethernet
-              </span>
-              <span className="material-symbols-outlined text-2xl">shield</span>
+              <MdCode className="text-2xl" />
+              <MdDeveloperMode className="text-2xl" />
+              <MdOutlineSettingsEthernet className="text-2xl" />
+              <MdShield className="text-2xl" />
             </div>
           </div>
         </div>
@@ -143,9 +149,7 @@ export default function Hero() {
           <div className="cube-wrapper scale-75 md:scale-90 lg:scale-100">
             <div className="animated-cube">
               <div className="cube-face face-front">
-                <span className="material-symbols-outlined text-accent/50 text-6xl">
-                  code
-                </span>
+                <MdCode className="text-accent/50 text-6xl" />
                 <div className="neon-corner top-0 left-0 border-t-2 border-l-2 border-primary text-primary dynamic-glow"></div>
                 <div
                   className="neon-corner bottom-0 right-0 border-b-2 border-r-2 border-accent text-accent dynamic-glow"
@@ -153,23 +157,17 @@ export default function Hero() {
                 ></div>
               </div>
               <div className="cube-face face-back">
-                <span className="material-symbols-outlined text-primary/50 text-6xl">
-                  memory
-                </span>
+                <MdMemory className="text-primary/50 text-6xl" />
               </div>
               <div className="cube-face face-right">
-                <span className="material-symbols-outlined text-accent/50 text-6xl">
-                  terminal
-                </span>
+                <MdTerminal className="text-accent/50 text-6xl" />
                 <div
                   className="neon-corner top-0 right-0 border-t-2 border-r-2 border-primary text-primary dynamic-glow"
                   style={{ animationDelay: "-1s" }}
                 ></div>
               </div>
               <div className="cube-face face-left">
-                <span className="material-symbols-outlined text-primary/50 text-6xl">
-                  database
-                </span>
+                <MdStorage className="text-primary/50 text-6xl" />
                 <div
                   className="neon-corner bottom-0 left-0 border-b-2 border-l-2 border-accent text-accent dynamic-glow"
                   style={{ animationDelay: "-3s" }}
@@ -191,9 +189,7 @@ export default function Hero() {
           <div className="status-card-sequential card-1 absolute -top-5 left-0 glass-card p-4 rounded-2xl w-[200px] z-30 border border-white/10 shadow-2xl">
             <div className="flex items-center gap-3 mb-3">
               <div className="w-8 h-8 rounded-lg bg-accent/20 flex items-center justify-center text-accent">
-                <span className="material-symbols-outlined text-xl">
-                  settings_input_component
-                </span>
+                <MdSettingsInputComponent className="text-xl" />
               </div>
               <div>
                 <p className="text-[8px] text-accent font-black uppercase tracking-widest">
@@ -217,7 +213,7 @@ export default function Hero() {
           <div className="status-card-sequential card-2 absolute top-20 -right-4 glass-card p-5 rounded-3xl w-[240px] z-30 border border-white/10 shadow-2xl">
             <div className="flex items-center gap-4 mb-4">
               <div className="w-10 h-10 rounded-xl bg-accent flex items-center justify-center text-slate-900 shadow-[0_0_15px_rgba(250,204,21,0.5)]">
-                <span className="material-icons text-xl">memory</span>
+                <MdMemory className="text-xl" />
               </div>
               <div>
                 <p className="text-[9px] text-accent font-black uppercase tracking-widest">
@@ -241,7 +237,7 @@ export default function Hero() {
           <div className="status-card-sequential card-3 absolute -bottom-10 right-4 glass-card p-4 rounded-2xl w-[220px] z-30 border border-white/10 shadow-2xl">
             <div className="flex items-center gap-3 mb-3">
               <div className="w-8 h-8 rounded-lg bg-primary/40 flex items-center justify-center text-accent">
-                <span className="material-symbols-outlined text-xl">sync</span>
+                <MdSync className="text-xl" />
               </div>
               <div>
                 <p className="text-[8px] text-accent font-black uppercase tracking-widest">

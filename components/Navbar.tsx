@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { HiBolt, HiBars3 } from "react-icons/hi2";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -20,7 +21,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <div className="flex items-center space-x-2">
           <div className="w-10 h-10 bg-primary flex items-center justify-center rounded-lg shadow-lg shadow-primary/30">
-            <span className="material-icons text-white">bolt</span>
+            <HiBolt className="text-white text-xl" />
           </div>
           <span className="text-xl font-extrabold tracking-tighter text-slate-900 dark:text-white uppercase">
             iTech<span className="text-accent">Poliban</span>
@@ -65,7 +66,7 @@ export default function Navbar() {
           </a>
         </div>
         <button type="button" className="md:hidden text-white">
-          <span className="material-icons">menu</span>
+          <HiBars3 className="text-2xl" />
         </button>
       </div>
     </nav>

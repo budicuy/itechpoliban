@@ -1,22 +1,24 @@
+import { MdCode, MdPalette, MdSmartphone, MdMemory } from "react-icons/md";
+
 export default function Divisi() {
   const divisions = [
     {
-      icon: "code",
+      icon: MdCode,
       title: "Web Development",
       desc: "Fokus pada pembuatan aplikasi web modern menggunakan React, Vue, dan Backend Node.js.",
     },
     {
-      icon: "palette",
+      icon: MdPalette,
       title: "UI/UX Design",
       desc: "Mempelajari desain antarmuka dan pengalaman pengguna yang estetis dan fungsional.",
     },
     {
-      icon: "smartphone",
+      icon: MdSmartphone,
       title: "Mobile Apps",
       desc: "Pengembangan aplikasi mobile lintas platform dengan Flutter dan React Native.",
     },
     {
-      icon: "memory",
+      icon: MdMemory,
       title: "IoT & Robotics",
       desc: "Eksplorasi integrasi perangkat keras dengan sistem cerdas dan otomatisasi.",
     },
@@ -38,9 +40,9 @@ export default function Divisi() {
             key={div.title}
             className="division-card bg-slate-50 dark:bg-slate-900/40 p-8 rounded-2xl border border-transparent transition-all group cursor-pointer"
           >
-            <span className="material-icons text-4xl text-primary mb-6 group-hover:scale-110 transition-transform block">
-              {div.icon}
-            </span>
+            <div className="text-4xl text-primary mb-6 group-hover:scale-110 transition-transform block">
+              <div.icon />
+            </div>
             <h4 className="text-xl font-bold text-slate-900 dark:text-white mb-3">
               {div.title}
             </h4>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { HiCheck } from "react-icons/hi2";
 
 export default function About() {
   return (
@@ -51,9 +52,7 @@ export default function About() {
               ].map((item) => (
                 <div key={item} className="flex items-start gap-4">
                   <div className="mt-1 bg-primary/20 p-1 rounded-full">
-                    <span className="material-icons text-primary text-sm">
-                      check
-                    </span>
+                    <HiCheck className="text-primary text-sm" />
                   </div>
                   <p className="text-slate-700 dark:text-slate-300 font-medium">
                     {item}
