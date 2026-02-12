@@ -47,7 +47,7 @@ export default function Navbar() {
             />
           </div>
           <span className="text-xl font-extrabold tracking-tighter text-slate-900 dark:text-white uppercase">
-            iTech<span className="text-accent">Poliban</span>
+            iTech <span className="text-accent">Poliban</span>
           </span>
         </Link>
 
@@ -62,12 +62,12 @@ export default function Navbar() {
               {link.name}
             </a>
           ))}
-          <a
+          <Link
             className="px-5 py-2 bg-primary hover:bg-primary/80 text-white rounded-lg text-sm font-semibold transition-all shadow-lg shadow-primary/20"
             href="#kontak"
           >
             Hubungi Kami
-          </a>
+          </Link>
         </div>
 
         {/* Mobile Toggle */}
