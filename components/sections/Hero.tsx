@@ -1,12 +1,8 @@
 import { FaFigma, FaHtml5, FaJs, FaReact } from "react-icons/fa";
 import {
   MdArrowForward,
-  MdCode,
-  MdDeveloperMode,
   MdMemory,
-  MdOutlineSettingsEthernet,
   MdSettingsInputComponent,
-  MdShield,
   MdSync,
 } from "react-icons/md";
 import { SiCanva } from "react-icons/si";
@@ -29,7 +25,7 @@ export default function Hero() {
           </div>
           <h1 className="text-6xl md:text-8xl font-black text-slate-900 dark:text-white leading-[0.95] tracking-tighter">
             Empowering <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-400 to-accent">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-primary via-purple-400 to-accent">
               Future Tech
             </span>
             <br /> Leaders
@@ -132,12 +128,12 @@ export default function Hero() {
                 ></div>
               </div>
               <div className="cube-face face-top">
-                <div className="w-full h-full bg-gradient-to-br from-primary/20 to-accent/10 flex items-center justify-center">
+                <div className="w-full h-full bg-linear-to-br from-primary/20 to-accent/10 flex items-center justify-center">
                   <SiCanva className="text-[#00C4CC]/30 text-5xl" />
                 </div>
               </div>
               <div className="cube-face face-bottom">
-                <div className="w-full h-full bg-gradient-to-tr from-accent/20 to-primary/10"></div>
+                <div className="w-full h-full bg-linear-to-trrom-accent/20 to-primary/10"></div>
               </div>
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-32 h-32 bg-primary/20 rounded-full blur-2xl animate-pulse"></div>
