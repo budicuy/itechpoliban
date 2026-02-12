@@ -1,16 +1,15 @@
-import Image from "next/image";
+import { FaFigma, FaHtml5, FaJs, FaReact } from "react-icons/fa";
 import {
   MdArrowForward,
   MdCode,
   MdDeveloperMode,
-  MdOutlineSettingsEthernet,
-  MdShield,
   MdMemory,
-  MdTerminal,
-  MdStorage,
+  MdOutlineSettingsEthernet,
   MdSettingsInputComponent,
+  MdShield,
   MdSync,
 } from "react-icons/md";
+import { SiCanva } from "react-icons/si";
 
 export default function Hero() {
   return (
@@ -55,17 +54,6 @@ export default function Hero() {
               Visi & Misi
             </button>
           </div>
-          <div className="flex items-center gap-6 pt-8 opacity-60 grayscale hover:grayscale-0 transition-all">
-            <span className="text-xs font-bold uppercase tracking-widest text-slate-500">
-              Core Expertise:
-            </span>
-            <div className="flex gap-4">
-              <MdCode className="text-2xl" />
-              <MdDeveloperMode className="text-2xl" />
-              <MdOutlineSettingsEthernet className="text-2xl" />
-              <MdShield className="text-2xl" />
-            </div>
-          </div>
         </div>
         <div className="relative w-full aspect-square max-w-[600px] mx-auto lg:mx-0 flex items-center justify-center">
           <div className="orbital-path rotating-orbit w-[350px] h-[350px]"></div>
@@ -80,13 +68,7 @@ export default function Hero() {
             style={{ animationDelay: "0s" }}
           >
             <div className="p-3 bg-background-dark/80 backdrop-blur-md rounded-xl border border-white/10 shadow-lg flex items-center justify-center">
-              <Image
-                alt="HTML"
-                className="w-8 h-8"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlq2SR_Zy016Dk-Z9p7O6Vft5tX1A-mte41spSRBiP1jtnUAZg_pr5r1-_BUzcpsIJu0KFuo6qPgx6KbBAI0vsTZTHox4036Pbob78fkbkNh74vQ01n8vCHi5N448vVqs8XFi09WN6qnRa2Z4P2QWq5wTpcDX7o4zI5tiLZ_x4hpPE1sr0ZGqmsfECHD3eLGWw5ThJL_oMeLobnKAArlsrSy56QP0iRstCO9_9GhQk43GzNEkX6d0s7iB5oruOjWnuITC1eJDBy5RL"
-                width={32}
-                height={32}
-              />
+              <FaHtml5 className="text-3xl text-[#E34F26]" />
             </div>
           </div>
           <div
@@ -94,13 +76,7 @@ export default function Hero() {
             style={{ animationDelay: "1.5s" }}
           >
             <div className="p-3 bg-background-dark/80 backdrop-blur-md rounded-xl border border-white/10 shadow-lg flex items-center justify-center">
-              <Image
-                alt="CSS"
-                className="w-8 h-8"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0cDfhks1cheV3zaJFTW-KW538s2RrVj5sDl5rRwsYjiHhFVhzF1n76MZRWoMB4DGtj97DuWjJrhj3lJY41J1d54OKS-aHMjPJ60UWZz6QtXH2ACaw6XuRzqaXYSeeLfGIn0aORi0nEGNLa_Dw1Dd_jVf7QOBEqD-E1CA130O2dkRBwwcuNbbbmjyElscMYY-sI8-GqoFMnG10Z9w6Xd9JtUS-AwlOGYj9XyXY3k-pW6QRx18Kd53WrNFZ5Iubcm9KCu2_zO9JaGQV"
-                width={32}
-                height={32}
-              />
+              <FaFigma className="text-3xl text-[#F24E1E]" />
             </div>
           </div>
           <div
@@ -108,13 +84,7 @@ export default function Hero() {
             style={{ animationDelay: "0.8s" }}
           >
             <div className="p-3 bg-background-dark/80 backdrop-blur-md rounded-xl border border-white/10 shadow-lg flex items-center justify-center">
-              <Image
-                alt="JS"
-                className="w-8 h-8"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfhkIfUagZQjmjmgaNVfs-a8hNYT7RAsdk80LuezDQ2OhZhFUE0y4g6-iTi640SWezPcqntidqQzmYmn5ID7CqujIr6Dou4SXSpBiShYneQ752cxp8xJILeu1VOfTSGN4MRXBJEJJ6TNbLyWuGQHGCw2HDl_-2b085y6XeFQCf7vU8cTsGnw1Yevs8FFtdYbK3lWCnCXnRDefp8zRJj5vh-zEnAMz_IA9d6gEWRuIjpZTwH17C7bpVugVRvoglbdxUU1qYzBmct4Ix"
-                width={32}
-                height={32}
-              />
+              <FaJs className="text-3xl text-[#F7DF1E]" />
             </div>
           </div>
           <div
@@ -122,13 +92,7 @@ export default function Hero() {
             style={{ animationDelay: "2.2s" }}
           >
             <div className="p-3 bg-background-dark/80 backdrop-blur-md rounded-xl border border-white/10 shadow-lg flex items-center justify-center">
-              <Image
-                alt="React"
-                className="w-8 h-8"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBruADSrh2fRczdHsSQkcnhmB9XhWh_gEqtmtmZD-cODrXXTWXeyXK6tXxLmeNeWUTb5wc6KtEjPARjZvvOXt3sGFMAFB4sKLkOdmJDNNXxDKCqQ-ElsnQ9foENujoN0zq9aZR01gz_leS4Y8nX_Ix9MmBQbpc3FsK6J4aqB4TGrJqUuG7ZtBO0IwZPv2eTiiVnuJuiX76DyjyMj0zpPUZoGbGVIwJvrqvYfxehz_KG0Frj6NbnpSYa6fv0Pe4S1Ihch3pC9J9QGqqN"
-                width={32}
-                height={32}
-              />
+              <FaReact className="text-3xl text-[#61DAFB]" />
             </div>
           </div>
           <div
@@ -136,20 +100,14 @@ export default function Hero() {
             style={{ animationDelay: "1.2s" }}
           >
             <div className="p-3 bg-background-dark/80 backdrop-blur-md rounded-xl border border-white/10 shadow-lg flex items-center justify-center">
-              <Image
-                alt="Python"
-                className="w-8 h-8"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWtdmqvZfa1oWZMc7xzkYBmIv0EO03kM-W1QLO6LJaR4eeEKAy29lwx-rDmmn8V9i7PTgFdLAYU14-m__WE243uzai8mcxmLw_5236cprnVXg-tsECZXXQQBUS1NKYtW0YpPkoD385htCz5bJuRm6dmYiJ6vCl0VU_GcMgvx2fT98vGs3PsUXdAH5DGaFDonrIkjNNsNXmqbeE5krWtFaGc7IYF3hSbW8bt4qvkdQBlORVCtXTwhSZYt6Juqy4H_0CVFjJWFPagYlX"
-                width={32}
-                height={32}
-              />
+              <SiCanva className="text-3xl text-[#00C4CC]" />
             </div>
           </div>
 
           <div className="cube-wrapper scale-75 md:scale-90 lg:scale-100">
             <div className="animated-cube">
               <div className="cube-face face-front">
-                <MdCode className="text-accent/50 text-6xl" />
+                <FaReact className="text-[#61DAFB]/50 text-6xl" />
                 <div className="neon-corner top-0 left-0 border-t-2 border-l-2 border-primary text-primary dynamic-glow"></div>
                 <div
                   className="neon-corner bottom-0 right-0 border-b-2 border-r-2 border-accent text-accent dynamic-glow"
@@ -157,24 +115,26 @@ export default function Hero() {
                 ></div>
               </div>
               <div className="cube-face face-back">
-                <MdMemory className="text-primary/50 text-6xl" />
+                <FaHtml5 className="text-[#E34F26]/50 text-6xl" />
               </div>
               <div className="cube-face face-right">
-                <MdTerminal className="text-accent/50 text-6xl" />
+                <FaJs className="text-[#F7DF1E]/50 text-6xl" />
                 <div
                   className="neon-corner top-0 right-0 border-t-2 border-r-2 border-primary text-primary dynamic-glow"
                   style={{ animationDelay: "-1s" }}
                 ></div>
               </div>
               <div className="cube-face face-left">
-                <MdStorage className="text-primary/50 text-6xl" />
+                <FaFigma className="text-[#F24E1E]/50 text-6xl" />
                 <div
                   className="neon-corner bottom-0 left-0 border-b-2 border-l-2 border-accent text-accent dynamic-glow"
                   style={{ animationDelay: "-3s" }}
                 ></div>
               </div>
               <div className="cube-face face-top">
-                <div className="w-full h-full bg-gradient-to-br from-primary/20 to-accent/10"></div>
+                <div className="w-full h-full bg-gradient-to-br from-primary/20 to-accent/10 flex items-center justify-center">
+                  <SiCanva className="text-[#00C4CC]/30 text-5xl" />
+                </div>
               </div>
               <div className="cube-face face-bottom">
                 <div className="w-full h-full bg-gradient-to-tr from-accent/20 to-primary/10"></div>

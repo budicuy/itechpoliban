@@ -1,4 +1,4 @@
-import { MdCode, MdPalette, MdSmartphone, MdMemory } from "react-icons/md";
+import { MdCode, MdMemory, MdPalette, MdSmartphone } from "react-icons/md";
 
 export default function Divisi() {
   const divisions = [

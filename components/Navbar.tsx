@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { HiBolt, HiBars3 } from "react-icons/hi2";
+import { HiBars3, HiBolt } from "react-icons/hi2";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);

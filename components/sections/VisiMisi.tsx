@@ -1,4 +1,4 @@
-import { MdVisibility, MdRocketLaunch } from "react-icons/md";
+import { MdRocketLaunch, MdVisibility } from "react-icons/md";
 
 export default function VisiMisi() {
   return (
