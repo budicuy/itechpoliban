@@ -1,5 +1,9 @@
 import Link from "next/link";
-import { MdEmojiEvents, MdOutlineLocationOn, MdMilitaryTech } from "react-icons/md";
+import {
+  MdEmojiEvents,
+  MdMilitaryTech,
+  MdOutlineLocationOn,
+} from "react-icons/md";
 
 export default function Prestasi() {
   const achievements = [
@@ -10,7 +14,8 @@ export default function Prestasi() {
       location: "Kalimantan Selatan",
       year: "2025",
       rank: "Gold Medal",
-      description: "Berhasil meraih Juara I kategori Software dalam rangka memeriahkan Hari Jadi Ke-75 Provinsi Kalimantan Selatan.",
+      description:
+        "Berhasil meraih Juara I kategori Software dalam rangka memeriahkan Hari Jadi Ke-75 Provinsi Kalimantan Selatan.",
       color: "from-yellow-400 to-amber-600",
     },
     {
@@ -20,7 +25,8 @@ export default function Prestasi() {
       location: "Kalimantan Selatan",
       year: "2025",
       rank: "Silver Medal",
-      description: "Meraih Juara II kategori Hardware pada ajang Lomba Kreativitas Pemuda tingkat Provinsi.",
+      description:
+        "Meraih Juara II kategori Hardware pada ajang Lomba Kreativitas Pemuda tingkat Provinsi.",
       color: "from-slate-300 to-slate-500",
     },
     {
@@ -30,13 +36,17 @@ export default function Prestasi() {
       location: "Kalimantan Selatan",
       year: "2025",
       rank: "Bronze Medal",
-      description: "Menempati posisi Juara III untuk bidang Desain Grafis dalam kompetisi tingkat Provinsi.",
+      description:
+        "Menempati posisi Juara III untuk bidang Desain Grafis dalam kompetisi tingkat Provinsi.",
       color: "from-orange-400 to-red-600",
     },
   ];
 
   return (
-    <section className="py-24 lg:py-40 bg-background-dark relative overflow-hidden" id="prestasi">
+    <section
+      className="py-24 lg:py-40 bg-background-dark relative overflow-hidden"
+      id="prestasi"
+    >
       {/* Decorative Elements */}
       <div className="absolute top-1/4 left-0 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[120px] -ml-40"></div>
       <div className="absolute bottom-1/4 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[150px] -mr-40"></div>
@@ -45,34 +55,48 @@ export default function Prestasi() {
         <div className="text-center mb-20 space-y-6">
           <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary">
             <MdEmojiEvents className="mr-2 text-xl" />
-            <span className="text-[10px] font-black uppercase tracking-[0.2em]">Latest Achievements</span>
+            <span className="text-[10px] font-black uppercase tracking-[0.2em]">
+              Latest Achievements
+            </span>
           </div>
           <h2 className="text-4xl md:text-6xl font-black text-white tracking-tighter">
-            Prestasi <span className="text-transparent bg-clip-text bg-linear-to-r from-primary via-purple-400 to-accent">Terbaru</span> 2025
+            Prestasi{" "}
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-primary via-purple-400 to-accent">
+              Terbaru
+            </span>
           </h2>
           <p className="text-slate-400 max-w-2xl mx-auto text-lg font-medium lg:px-0 px-4">
-            Dedikasi berkelanjutan iTech Poliban dalam berinovasi dan berkompetisi di tingkat provinsi maupun nasional.
+            Dedikasi berkelanjutan iTech Poliban dalam berinovasi dan
+            berkompetisi di tingkat provinsi maupun nasional.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {achievements.map((item) => (
-            <div 
+            <div
               key={item.id}
               className="group relative glass-card p-1 rounded-[2.5rem] border-white/5 hover:border-white/20 transition-all duration-500 hover:-translate-y-2"
             >
               <div className="relative h-full bg-slate-900/40 backdrop-blur-xl rounded-[2.4rem] p-8 md:p-10 overflow-hidden">
                 {/* Background Glow */}
-                <div className={`absolute -top-24 -right-24 w-48 h-48 bg-linear-to-br ${item.color} opacity-10 blur-3xl group-hover:opacity-20 transition-opacity`}></div>
+                <div
+                  className={`absolute -top-24 -right-24 w-48 h-48 bg-linear-to-br ${item.color} opacity-10 blur-3xl group-hover:opacity-20 transition-opacity`}
+                ></div>
 
                 <div className="relative z-10 space-y-6">
                   <div className="flex items-center justify-between">
-                    <div className={`w-14 h-14 rounded-2xl bg-linear-to-br ${item.color} flex items-center justify-center text-slate-900 shadow-lg`}>
+                    <div
+                      className={`w-14 h-14 rounded-2xl bg-linear-to-br ${item.color} flex items-center justify-center text-slate-900 shadow-lg`}
+                    >
                       <MdMilitaryTech className="text-3xl" />
                     </div>
                     <div className="text-right">
-                      <div className="text-[10px] font-black text-accent uppercase tracking-widest">{item.year}</div>
-                      <div className="text-xs font-bold text-white/40">{item.category}</div>
+                      <div className="text-[10px] font-black text-accent uppercase tracking-widest">
+                        {item.year}
+                      </div>
+                      <div className="text-xs font-bold text-white/40">
+                        {item.category}
+                      </div>
                     </div>
                   </div>
 
@@ -93,7 +117,9 @@ export default function Prestasi() {
                   <div className="pt-4 flex items-center gap-4">
                     <div className="h-px flex-1 bg-white/10"></div>
                     <div className="px-4 py-1.5 rounded-full bg-white/5 border border-white/10">
-                      <span className="text-[10px] font-black text-white uppercase tracking-widest">{item.rank}</span>
+                      <span className="text-[10px] font-black text-white uppercase tracking-widest">
+                        {item.rank}
+                      </span>
                     </div>
                   </div>
                 </div>

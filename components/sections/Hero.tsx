@@ -5,12 +5,7 @@ import {
   MdSettingsInputComponent,
   MdSync,
 } from "react-icons/md";
-import {
-  SiCanva,
-  SiAdobe,
-  SiGoogle,
-  SiGooglegemini,
-} from "react-icons/si";
+import { SiAdobe, SiCanva, SiGoogle, SiGooglegemini } from "react-icons/si";
 
 export default function Hero() {
   return (

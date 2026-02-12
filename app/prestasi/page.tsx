@@ -1,7 +1,11 @@
+import Link from "next/link";
+import {
+  MdArrowBack,
+  MdMilitaryTech,
+  MdOutlineLocationOn,
+} from "react-icons/md";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/sections/Footer";
-import { MdOutlineLocationOn, MdMilitaryTech, MdArrowBack } from "react-icons/md";
-import Link from "next/link";
 
 export default function PrestasiPage() {
   const allAchievements = [
@@ -12,21 +16,24 @@ export default function PrestasiPage() {
           title: "Juara I Kategori Software",
           competition: "Lomba Kreativitas Pemuda Provinsi Kalimantan Selatan",
           rank: "Gold Medal",
-          description: "Dalam rangka memeriahkan Hari Jadi Ke-75 Provinsi Kalimantan Selatan.",
+          description:
+            "Dalam rangka memeriahkan Hari Jadi Ke-75 Provinsi Kalimantan Selatan.",
           color: "from-yellow-400 to-amber-600",
         },
         {
           title: "Juara II Kategori Hardware",
           competition: "Lomba Kreativitas Pemuda Provinsi Kalimantan Selatan",
           rank: "Silver Medal",
-          description: "Dalam rangka memeriahkan Hari Jadi Ke-75 Provinsi Kalimantan Selatan.",
+          description:
+            "Dalam rangka memeriahkan Hari Jadi Ke-75 Provinsi Kalimantan Selatan.",
           color: "from-slate-300 to-slate-500",
         },
         {
           title: "Juara III Kategori Desain Grafis",
           competition: "Lomba Kreativitas Pemuda Provinsi Kalimantan Selatan",
           rank: "Bronze Medal",
-          description: "Dalam rangka memeriahkan Hari Jadi Ke-75 Provinsi Kalimantan Selatan.",
+          description:
+            "Dalam rangka memeriahkan Hari Jadi Ke-75 Provinsi Kalimantan Selatan.",
           color: "from-orange-400 to-red-600",
         },
       ],
@@ -38,7 +45,8 @@ export default function PrestasiPage() {
           title: "Juara I Pemuda Pelopor",
           competition: "Tingkat Provinsi Kalimantan Selatan",
           rank: "Gold Medal",
-          description: "Penghargaan atas dedikasi dalam kepeloporan bidang teknologi.",
+          description:
+            "Penghargaan atas dedikasi dalam kepeloporan bidang teknologi.",
           color: "from-blue-400 to-indigo-600",
         },
         {
@@ -52,7 +60,8 @@ export default function PrestasiPage() {
           title: "Juara I International Business Administration",
           competition: "Competition 2024",
           rank: "International Winner",
-          description: "Kemenangan di bidang administrasi bisnis internasional.",
+          description:
+            "Kemenangan di bidang administrasi bisnis internasional.",
           color: "from-purple-400 to-fuchsia-600",
         },
         {
@@ -73,7 +82,8 @@ export default function PrestasiPage() {
           title: "Juara I Poster Animasi KMIPN VI",
           competition: "Politeknik Negeri Jakarta 2024",
           rank: "National Gold",
-          description: "Ajang bergengsi mahasiswa informatika politeknik se-Indonesia.",
+          description:
+            "Ajang bergengsi mahasiswa informatika politeknik se-Indonesia.",
           color: "from-cyan-400 to-blue-600",
         },
       ],
@@ -102,22 +112,27 @@ export default function PrestasiPage() {
   return (
     <main className="min-h-screen bg-background-dark">
       <Navbar />
-      
+
       {/* Header Section */}
       <section className="pt-32 pb-20 relative overflow-hidden">
         <div className="absolute top-0 inset-x-0 h-px bg-linear-to-r from-transparent via-primary/30 to-transparent"></div>
         <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/10 rounded-full blur-[120px]"></div>
-        
+
         <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
-          <Link 
-            href="/#prestasi" 
+          <Link
+            href="/#prestasi"
             className="inline-flex items-center gap-2 text-slate-500 hover:text-white transition-colors mb-8 group"
           >
             <MdArrowBack className="group-hover:-translate-x-1 transition-transform" />
-            <span className="text-xs font-bold uppercase tracking-widest">Kembali ke Beranda</span>
+            <span className="text-xs font-bold uppercase tracking-widest">
+              Kembali ke Beranda
+            </span>
           </Link>
           <h1 className="text-5xl md:text-7xl font-black text-white tracking-tighter mb-6">
-            Galeri <span className="text-transparent bg-clip-text bg-linear-to-r from-primary via-purple-400 to-accent">Prestasi</span>
+            Galeri{" "}
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-primary via-purple-400 to-accent">
+              Prestasi
+            </span>
           </h1>
           <p className="text-slate-400 max-w-2xl mx-auto text-lg font-medium italic">
             "Satu visi, sejuta aksi, mengukir prestasi."
@@ -133,27 +148,35 @@ export default function PrestasiPage() {
               {/* Year Label */}
               <div className="sticky top-24 z-30 mb-12">
                 <div className="inline-block px-8 py-3 bg-primary rounded-2xl shadow-xl shadow-primary/20">
-                  <span className="text-2xl font-black text-white italic tracking-widest">{group.year}</span>
+                  <span className="text-2xl font-black text-white italic tracking-widest">
+                    {group.year}
+                  </span>
                 </div>
                 <div className="absolute top-1/2 left-0 right-0 h-px bg-white/5 -z-10"></div>
               </div>
 
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {group.items.map((item, idx) => (
-                  <div 
+                  <div
                     key={item.title}
                     className="group relative glass-card p-1 rounded-[2.5rem] border-white/5 hover:border-white/20 transition-all duration-500 hover:-translate-y-2 h-full"
                   >
                     <div className="relative h-full bg-slate-900/40 backdrop-blur-xl rounded-[2.4rem] p-8 overflow-hidden flex flex-col">
-                      <div className={`absolute -top-24 -right-24 w-48 h-48 bg-linear-to-br ${item.color} opacity-10 blur-3xl group-hover:opacity-25 transition-opacity`}></div>
-                      
+                      <div
+                        className={`absolute -top-24 -right-24 w-48 h-48 bg-linear-to-br ${item.color} opacity-10 blur-3xl group-hover:opacity-25 transition-opacity`}
+                      ></div>
+
                       <div className="relative z-10 space-y-6 flex-1">
                         <div className="flex items-center justify-between">
-                          <div className={`w-12 h-12 rounded-xl bg-linear-to-br ${item.color} flex items-center justify-center text-slate-900 shadow-lg`}>
+                          <div
+                            className={`w-12 h-12 rounded-xl bg-linear-to-br ${item.color} flex items-center justify-center text-slate-900 shadow-lg`}
+                          >
                             <MdMilitaryTech className="text-2xl" />
                           </div>
                           <div className="px-3 py-1 rounded-full bg-white/5 border border-white/10">
-                            <span className="text-[10px] font-black text-white/60 uppercase tracking-widest">{item.rank}</span>
+                            <span className="text-[10px] font-black text-white/60 uppercase tracking-widest">
+                              {item.rank}
+                            </span>
                           </div>
                         </div>
 
@@ -174,8 +197,13 @@ export default function PrestasiPage() {
 
                       <div className="mt-8 pt-6 border-t border-white/5 relative z-10">
                         <div className="flex items-center justify-between text-[10px] font-black uppercase tracking-[0.2em]">
-                          <span className="text-primary">Achievement Verified</span>
-                          <span className="text-white/20">#{group.year}{idx + 1}</span>
+                          <span className="text-primary">
+                            Achievement Verified
+                          </span>
+                          <span className="text-white/20">
+                            #{group.year}
+                            {idx + 1}
+                          </span>
                         </div>
                       </div>
                     </div>
