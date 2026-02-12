@@ -3,7 +3,7 @@ import { MdRocketLaunch, MdVisibility } from "react-icons/md";
 export default function VisiMisi() {
   return (
     <section
-      className="py-24 bg-background-light dark:bg-slate-900/50"
+      className="py-16 lg:py-24 bg-background-light dark:bg-slate-900/50"
       id="visi-misi"
     >
       <div className="max-w-7xl mx-auto px-6 text-center mb-16">

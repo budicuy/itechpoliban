@@ -25,7 +25,10 @@ export default function Divisi() {
   ];
 
   return (
-    <section className="py-24 bg-white dark:bg-background-dark" id="divisi">
+    <section
+      className="py-16 lg:py-24 bg-white dark:bg-background-dark"
+      id="divisi"
+    >
       <div className="max-w-7xl mx-auto px-6 text-center mb-16">
         <h2 className="text-accent font-bold uppercase tracking-[0.3em] text-xs mb-4">
           Spesialisasi Kami
