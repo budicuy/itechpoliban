@@ -9,7 +9,7 @@ import { SiCanva } from "react-icons/si";
 
 export default function Hero() {
   return (
-    <section className="relative lg:min-h-screen flex items-center pt-24 lg:pt-20 pb-4 lg:pb-0 hero-gradient overflow-hidden">
+    <section className="relative lg:min-h-screen flex items-center pt-24 pb-20 lg:pt-20 lg:pb-0 hero-gradient overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute inset-0 dotted-grid-bg"></div>
         <div className="absolute top-1/4 right-1/4 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[120px]"></div>

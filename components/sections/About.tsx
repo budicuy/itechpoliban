@@ -16,7 +16,8 @@ export default function About() {
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-          <div className="relative group">
+          {/* Visual Element with Logo - Order 2 on mobile, 1 on desktop */}
+          <div className="relative group order-2 lg:order-1">
             <div className="relative w-full aspect-square max-w-[450px] mx-auto flex items-center justify-center">
               {/* Spinning Orbits */}
               <div className="absolute orbital-path w-[110%] h-[110%] border-primary/20 rotating-orbit"></div>
@@ -29,9 +30,7 @@ export default function About() {
               ></div>
 
               {/* Glow Effect */}
-              <div
-                className="absolute inset-0 bg-linear-to-tr from-primary/30 to-accent/10 rounded-full blur-[60px] opacity-50 group-hover:opacity-80 transition-opacity duration-1000"
-              ></div>
+              <div className="absolute inset-0 bg-linear-to-tr from-primary/30 to-accent/10 rounded-full blur-[60px] opacity-50 group-hover:opacity-80 transition-opacity duration-1000"></div>
 
               {/* Main Logo */}
               <div className="relative z-10 w-full h-full p-8 sm:p-12 floating-icon">
@@ -46,47 +45,59 @@ export default function About() {
               </div>
 
               {/* Floating Stat Badges */}
-              <div 
+              <div
                 className="absolute -top-4 -left-4 glass-card p-4 rounded-2xl shadow-xl floating-icon z-20 border-white/20"
-                style={{ animationDelay: '0s' }}
+                style={{ animationDelay: "0s" }}
               >
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center text-primary">
                     <span className="font-black">3+</span>
                   </div>
                   <div>
-                    <p className="text-[10px] text-slate-500 font-bold uppercase tracking-tighter">Years of</p>
-                    <p className="text-xs font-black dark:text-white">Experience</p>
+                    <p className="text-[10px] text-slate-500 font-bold uppercase tracking-tighter">
+                      Years of
+                    </p>
+                    <p className="text-xs font-black dark:text-white">
+                      Experience
+                    </p>
                   </div>
                 </div>
               </div>
 
-              <div 
+              <div
                 className="absolute top-1/2 -right-8 glass-card p-4 rounded-2xl shadow-xl floating-icon z-20 border-white/20"
-                style={{ animationDelay: '1.5s' }}
+                style={{ animationDelay: "1.5s" }}
               >
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-xl bg-accent/20 flex items-center justify-center text-accent">
                     <span className="font-black">100+</span>
                   </div>
                   <div>
-                    <p className="text-[10px] text-slate-500 font-bold uppercase tracking-tighter">Active</p>
-                    <p className="text-xs font-black dark:text-white">Members</p>
+                    <p className="text-[10px] text-slate-500 font-bold uppercase tracking-tighter">
+                      Active
+                    </p>
+                    <p className="text-xs font-black dark:text-white">
+                      Members
+                    </p>
                   </div>
                 </div>
               </div>
 
-              <div 
+              <div
                 className="absolute -bottom-4 left-1/4 glass-card p-4 rounded-2xl shadow-xl floating-icon z-20 border-white/20"
-                style={{ animationDelay: '0.8s' }}
+                style={{ animationDelay: "0.8s" }}
               >
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-xl bg-purple-500/20 flex items-center justify-center text-purple-500">
                     <span className="font-black">50+</span>
                   </div>
                   <div>
-                    <p className="text-[10px] text-slate-500 font-bold uppercase tracking-tighter">Finished</p>
-                    <p className="text-xs font-black dark:text-white">Projects</p>
+                    <p className="text-[10px] text-slate-500 font-bold uppercase tracking-tighter">
+                      Finished
+                    </p>
+                    <p className="text-xs font-black dark:text-white">
+                      Projects
+                    </p>
                   </div>
                 </div>
               </div>
@@ -100,8 +111,8 @@ export default function About() {
             </div>
           </div>
 
-          {/* Content Side */}
-          <div className="space-y-8">
+          {/* Content Side - Order 1 on mobile, 2 on desktop */}
+          <div className="space-y-8 order-1 lg:order-2">
             <div className="space-y-4">
               <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary hover:bg-primary/20 transition-colors cursor-default">
                 <span className="w-2 h-2 rounded-full bg-accent mr-2 animate-pulse"></span>
@@ -112,9 +123,8 @@ export default function About() {
               <h2 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white leading-[1.1] tracking-tighter">
                 Mencetak{" "}
                 <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-purple-500">
-                  Generasi Unggul
+                  Generasi Unggul{" "}
                 </span>{" "}
-                <br />
                 di Bidang Teknologi
               </h2>
             </div>
