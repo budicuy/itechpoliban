@@ -1,36 +1,37 @@
+import Link from "next/link";
 import { MdEmojiEvents, MdOutlineLocationOn, MdMilitaryTech } from "react-icons/md";
 
 export default function Prestasi() {
   const achievements = [
     {
       id: 1,
-      title: "Juara 1 KMIPN VI 2024",
-      category: "Cyber Security",
-      location: "Politeknik Negeri Jakarta",
-      year: "2024",
+      title: "Juara I Lomba Kreativitas Pemuda",
+      category: "Software",
+      location: "Kalimantan Selatan",
+      year: "2025",
       rank: "Gold Medal",
-      description: "Berhasil meraih medali emas dalam kompetisi keamanan siber tingkat nasional antar Politeknik se-Indonesia.",
+      description: "Berhasil meraih Juara I kategori Software dalam rangka memeriahkan Hari Jadi Ke-75 Provinsi Kalimantan Selatan.",
       color: "from-yellow-400 to-amber-600",
     },
     {
       id: 2,
-      title: "Finalis Gemastik XVI 2023",
-      category: "Game Development",
-      location: "Universitas Brawijaya",
-      year: "2023",
-      rank: "Top 10 National",
-      description: "Menjadi finalis dalam ajang bergengsi Gemastik bidang pengembangan permainan dengan inovasi game edukasi.",
-      color: "from-blue-400 to-indigo-600",
+      title: "Juara II Lomba Kreativitas Pemuda",
+      category: "Hardware",
+      location: "Kalimantan Selatan",
+      year: "2025",
+      rank: "Silver Medal",
+      description: "Meraih Juara II kategori Hardware pada ajang Lomba Kreativitas Pemuda tingkat Provinsi.",
+      color: "from-slate-300 to-slate-500",
     },
     {
       id: 3,
-      title: "Juara 2 Hackathon Maritim 2024",
-      category: "IoT & Web",
-      location: "Banjarmasin",
-      year: "2024",
-      rank: "Silver Medal",
-      description: "Inovasi sistem monitoring kapal nelayan berbasis IoT dan dashboard real-time untuk efisiensi bahan bakar.",
-      color: "from-emerald-400 to-teal-600",
+      title: "Juara III Lomba Kreativitas Pemuda",
+      category: "Desain Grafis",
+      location: "Kalimantan Selatan",
+      year: "2025",
+      rank: "Bronze Medal",
+      description: "Menempati posisi Juara III untuk bidang Desain Grafis dalam kompetisi tingkat Provinsi.",
+      color: "from-orange-400 to-red-600",
     },
   ];
 
@@ -44,13 +45,13 @@ export default function Prestasi() {
         <div className="text-center mb-20 space-y-6">
           <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary">
             <MdEmojiEvents className="mr-2 text-xl" />
-            <span className="text-[10px] font-black uppercase tracking-[0.2em]">Our Hall of Fame</span>
+            <span className="text-[10px] font-black uppercase tracking-[0.2em]">Latest Achievements</span>
           </div>
           <h2 className="text-4xl md:text-6xl font-black text-white tracking-tighter">
-            Jejak <span className="text-transparent bg-clip-text bg-linear-to-r from-primary via-purple-400 to-accent">Prestasi</span> Kami
+            Prestasi <span className="text-transparent bg-clip-text bg-linear-to-r from-primary via-purple-400 to-accent">Terbaru</span> 2025
           </h2>
           <p className="text-slate-400 max-w-2xl mx-auto text-lg font-medium lg:px-0 px-4">
-            Dedikasi dan kerja keras anggota iTech Poliban dalam berbagai ajang kompetisi teknologi tingkat regional maupun nasional.
+            Dedikasi berkelanjutan iTech Poliban dalam berinovasi dan berkompetisi di tingkat provinsi maupun nasional.
           </p>
         </div>
 
@@ -103,13 +104,13 @@ export default function Prestasi() {
 
         {/* View More Button (Dummy) */}
         <div className="mt-20 text-center">
-          <button
-            type="button"
-            className="flex items-center justify-center gap-3 mx-auto px-10 py-5 bg-white/5 border border-white/10 hover:border-primary/50 text-white font-black uppercase tracking-[0.2em] text-xs rounded-2xl transition-all hover:bg-primary/10 group"
+          <Link
+            href="/prestasi"
+            className="inline-flex items-center justify-center gap-3 mx-auto px-10 py-5 bg-white/5 border border-white/10 hover:border-primary/50 text-white font-black uppercase tracking-[0.2em] text-xs rounded-2xl transition-all hover:bg-primary/10 group"
           >
             Lihat Semua Prestasi
             <MdEmojiEvents className="text-xl group-hover:rotate-12 transition-transform" />
-          </button>
+          </Link>
         </div>
       </div>
     </section>

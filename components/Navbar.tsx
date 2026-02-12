@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { HiBars3 } from "react-icons/hi2";
 
@@ -20,8 +21,8 @@ export default function Navbar() {
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? "glass-nav py-2" : "py-4"}`}
     >
       <div className="max-w-7xl mx-auto px-6 h-13 flex items-center justify-between">
-        <div className="flex items-center space-x-3">
-          <div className="relative w-10 h-10">
+        <Link href="/" className="flex items-center space-x-3 group">
+          <div className="relative w-10 h-10 transition-transform group-hover:scale-110">
             <Image
               alt="iTech Poliban Logo"
               className="object-contain"
@@ -33,7 +34,7 @@ export default function Navbar() {
           <span className="text-xl font-extrabold tracking-tighter text-slate-900 dark:text-white uppercase">
             iTech<span className="text-accent">Poliban</span>
           </span>
-        </div>
+        </Link>
         <div className="hidden md:flex items-center space-x-8">
           <a
             className="text-sm font-medium hover:text-accent transition-colors"
