@@ -1,11 +1,16 @@
-import { FaFigma, FaHtml5, FaJs, FaReact } from "react-icons/fa";
+import { FaFigma } from "react-icons/fa";
 import {
   MdArrowForward,
   MdMemory,
   MdSettingsInputComponent,
   MdSync,
 } from "react-icons/md";
-import { SiCanva } from "react-icons/si";
+import {
+  SiCanva,
+  SiAdobe,
+  SiGoogle,
+  SiGooglegemini,
+} from "react-icons/si";
 
 export default function Hero() {
   return (
@@ -64,7 +69,7 @@ export default function Hero() {
             style={{ animationDelay: "0s" }}
           >
             <div className="p-3 bg-background-dark/80 backdrop-blur-md rounded-xl border border-white/10 shadow-lg flex items-center justify-center">
-              <FaHtml5 className="text-3xl text-[#E34F26]" />
+              <SiGooglegemini className="text-3xl text-[#8E75FF]" />
             </div>
           </div>
           <div
@@ -80,7 +85,7 @@ export default function Hero() {
             style={{ animationDelay: "0.8s" }}
           >
             <div className="p-3 bg-background-dark/80 backdrop-blur-md rounded-xl border border-white/10 shadow-lg flex items-center justify-center">
-              <FaJs className="text-3xl text-[#F7DF1E]" />
+              <SiAdobe className="text-3xl text-[#FF0000]" />
             </div>
           </div>
           <div
@@ -88,7 +93,7 @@ export default function Hero() {
             style={{ animationDelay: "2.2s" }}
           >
             <div className="p-3 bg-background-dark/80 backdrop-blur-md rounded-xl border border-white/10 shadow-lg flex items-center justify-center">
-              <FaReact className="text-3xl text-[#61DAFB]" />
+              <SiGoogle className="text-3xl text-[#4285F4]" />
             </div>
           </div>
           <div
@@ -103,7 +108,7 @@ export default function Hero() {
           <div className="cube-wrapper scale-50 sm:scale-75 md:scale-90 lg:scale-100">
             <div className="animated-cube">
               <div className="cube-face face-front">
-                <FaReact className="text-[#61DAFB]/50 text-6xl" />
+                <SiGoogle className="text-[#4285F4]/50 text-6xl" />
                 <div className="neon-corner top-0 left-0 border-t-2 border-l-2 border-primary text-primary dynamic-glow"></div>
                 <div
                   className="neon-corner bottom-0 right-0 border-b-2 border-r-2 border-accent text-accent dynamic-glow"
@@ -111,10 +116,10 @@ export default function Hero() {
                 ></div>
               </div>
               <div className="cube-face face-back">
-                <FaHtml5 className="text-[#E34F26]/50 text-6xl" />
+                <SiGooglegemini className="text-[#8E75FF]/50 text-6xl" />
               </div>
               <div className="cube-face face-right">
-                <FaJs className="text-[#F7DF1E]/50 text-6xl" />
+                <SiAdobe className="text-[#FF0000]/50 text-6xl" />
                 <div
                   className="neon-corner top-0 right-0 border-t-2 border-r-2 border-primary text-primary dynamic-glow"
                   style={{ animationDelay: "-1s" }}

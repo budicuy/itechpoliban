@@ -19,7 +19,7 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? "glass-nav py-2" : "py-4"}`}
     >
-      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 h-13 flex items-center justify-between">
         <div className="flex items-center space-x-3">
           <div className="relative w-10 h-10">
             <Image
