@@ -1,43 +1,43 @@
 import Link from 'next/link'
 import { MdEmojiEvents, MdMilitaryTech, MdOutlineLocationOn } from 'react-icons/md'
 
-export default function Prestasi() {
-  const achievements = [
-    {
-      category: 'Software',
-      color: 'from-yellow-400 to-amber-600',
-      description:
-        'Berhasil meraih Juara I kategori Software dalam rangka memeriahkan Hari Jadi Ke-75 Provinsi Kalimantan Selatan.',
-      id: 1,
-      location: 'Kalimantan Selatan',
-      rank: 'Gold Medal',
-      title: 'Juara I Lomba Kreativitas Pemuda',
-      year: '2025'
-    },
-    {
-      category: 'Hardware',
-      color: 'from-slate-300 to-slate-500',
-      description:
-        'Meraih Juara II kategori Hardware pada ajang Lomba Kreativitas Pemuda tingkat Provinsi.',
-      id: 2,
-      location: 'Kalimantan Selatan',
-      rank: 'Silver Medal',
-      title: 'Juara II Lomba Kreativitas Pemuda',
-      year: '2025'
-    },
-    {
-      category: 'Desain Grafis',
-      color: 'from-orange-400 to-red-600',
-      description:
-        'Menempati posisi Juara III untuk bidang Desain Grafis dalam kompetisi tingkat Provinsi.',
-      id: 3,
-      location: 'Kalimantan Selatan',
-      rank: 'Bronze Medal',
-      title: 'Juara III Lomba Kreativitas Pemuda',
-      year: '2025'
-    }
-  ]
+const achievements = [
+  {
+    category: 'Software',
+    color: 'from-yellow-400 to-amber-600',
+    description:
+      'Berhasil meraih Juara I kategori Software dalam rangka memeriahkan Hari Jadi Ke-75 Provinsi Kalimantan Selatan.',
+    id: 1,
+    location: 'Kalimantan Selatan',
+    rank: 'Gold Medal',
+    title: 'Juara I Lomba Kreativitas Pemuda',
+    year: '2025'
+  },
+  {
+    category: 'Hardware',
+    color: 'from-slate-300 to-slate-500',
+    description:
+      'Meraih Juara II kategori Hardware pada ajang Lomba Kreativitas Pemuda tingkat Provinsi.',
+    id: 2,
+    location: 'Kalimantan Selatan',
+    rank: 'Silver Medal',
+    title: 'Juara II Lomba Kreativitas Pemuda',
+    year: '2025'
+  },
+  {
+    category: 'Desain Grafis',
+    color: 'from-orange-400 to-red-600',
+    description:
+      'Menempati posisi Juara III untuk bidang Desain Grafis dalam kompetisi tingkat Provinsi.',
+    id: 3,
+    location: 'Kalimantan Selatan',
+    rank: 'Bronze Medal',
+    title: 'Juara III Lomba Kreativitas Pemuda',
+    year: '2025'
+  }
+]
 
+export default function Prestasi() {
   return (
     <section className='py-24 lg:py-40 bg-background-dark relative overflow-hidden' id='prestasi'>
       {/* Decorative Elements */}

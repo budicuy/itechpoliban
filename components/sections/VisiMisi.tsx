@@ -3,31 +3,31 @@
 import { useEffect, useState } from 'react'
 import { MdChevronRight, MdRocketLaunch, MdVisibility } from 'react-icons/md'
 
+const misiData = [
+  {
+    num: '01.',
+    text: 'Mewadahi kreatifitas mahasiswa di bidang IT.',
+    title: 'Wadah Kreativitas'
+  },
+  {
+    num: '02.',
+    text: 'Mengkoordinir kegiatan kemahasiswaan yang bergerak di bidang IT.',
+    title: 'Koordinasi Kegiatan'
+  },
+  {
+    num: '03.',
+    text: 'Mendorong mahasiswa untuk ikut berpartisipasi dalam kompetisi di bidang IT.',
+    title: 'Partisipasi Kompetisi'
+  },
+  {
+    num: '04.',
+    text: 'Mendorong mahasiswa untuk mengembangkan teknologi dilingkungan kampus maupun masyarakat.',
+    title: 'Pengembangan Teknologi'
+  }
+]
+
 export default function VisiMisi() {
   const [activeMisi, setActiveMisi] = useState(0)
-
-  const misiData = [
-    {
-      num: '01.',
-      text: 'Mewadahi kreatifitas mahasiswa di bidang IT.',
-      title: 'Wadah Kreativitas'
-    },
-    {
-      num: '02.',
-      text: 'Mengkoordinir kegiatan kemahasiswaan yang bergerak di bidang IT.',
-      title: 'Koordinasi Kegiatan'
-    },
-    {
-      num: '03.',
-      text: 'Mendorong mahasiswa untuk ikut berpartisipasi dalam kompetisi di bidang IT.',
-      title: 'Partisipasi Kompetisi'
-    },
-    {
-      num: '04.',
-      text: 'Mendorong mahasiswa untuk mengembangkan teknologi dilingkungan kampus maupun masyarakat.',
-      title: 'Pengembangan Teknologi'
-    }
-  ]
 
   useEffect(() => {
     const interval = setInterval(() => {

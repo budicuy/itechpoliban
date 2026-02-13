@@ -10,94 +10,94 @@ import {
   MdSecurity
 } from 'react-icons/md'
 
-export default function Divisi() {
-  const divisions = [
-    {
-      bg: 'bg-red-500/10',
-      border: 'hover:border-red-500/50',
-      color: 'from-red-500 to-orange-500',
-      description:
-        'Wadah bagi mahasiswa Poliban untuk mempelajari kerentanan di dunia maya dan mengembangkan kemampuan menjadi ahli keamanan. Fokus pada kompetensi Capture The Flag (CTF) — kompetensi hacking profesional.',
-      icon: MdSecurity,
-      iconColor: 'text-red-500',
-      id: 1,
-      name: 'Cyber Security',
-      tag: 'Security'
-    },
-    {
-      bg: 'bg-blue-500/10',
-      border: 'hover:border-blue-500/50',
-      color: 'from-blue-500 to-cyan-500',
-      description:
-        'Tempat bagi seniman visual untuk menciptakan dunia yang hidup. Fokus pada desain karakter, teknik animasi, dan visualisasi cerita yang menggabungkan imajinasi artistik dengan keahlian teknis tingkat tinggi.',
-      icon: MdAnimation,
-      iconColor: 'text-blue-500',
-      id: 2,
-      name: 'Animasi',
-      tag: 'Creative'
-    },
-    {
-      bg: 'bg-primary/10',
-      border: 'hover:border-primary/50',
-      color: 'from-primary to-purple-500',
-      description:
-        'Pengembangan perangkat lunak dari konsep hingga kode. Menguasai bahasa pemrograman dan teknologi terkini untuk membangun solusi perangkat lunak yang efisien, inovatif, dan berdampak nyata bagi industri.',
-      icon: MdCode,
-      iconColor: 'text-primary',
-      id: 3,
-      name: 'Programming',
-      tag: 'Software'
-    },
-    {
-      bg: 'bg-emerald-500/10',
-      border: 'hover:border-emerald-500/50',
-      color: 'from-emerald-500 to-teal-500',
-      description:
-        'Eksplorasi kreativitas dalam pembuatan permainan digital. Merancang, mengembangkan, dan menguji game dengan fokus pada grafis, dan animasi untuk menciptakan pengalaman bermain yang luar biasa.',
-      icon: MdGamepad,
-      iconColor: 'text-emerald-500',
-      id: 5,
-      name: 'Game Development',
-      tag: 'Gaming'
-    },
-    {
-      bg: 'bg-purple-500/10',
-      border: 'hover:border-purple-500/50',
-      color: 'from-purple-500 to-indigo-500',
-      description:
-        'Menggali konektivitas objek fisik melalui jaringan digital. Solusi teknologi dari sensor cerdas hingga pemantauan jarak jauh untuk menciptakan lingkungan pintar guna mewujudkan Revolusi Industri 4.0.',
-      icon: MdMemory,
-      iconColor: 'text-purple-500',
-      id: 6,
-      name: 'Internet Of Things',
-      tag: 'Hardware'
-    },
-    {
-      bg: 'bg-orange-500/10',
-      border: 'hover:border-orange-500/50',
-      color: 'from-orange-500 to-yellow-500',
-      description:
-        'Fokus pada desain antarmuka dan pengalaman pengguna yang intuitif. Melalui riset, prototipe, dan usability testing untuk menciptakan pengalaman digital optimal yang meningkatkan kepuasan pengguna.',
-      icon: MdBrush,
-      iconColor: 'text-orange-500',
-      id: 7,
-      name: 'UI/UX',
-      tag: 'Design'
-    },
-    {
-      bg: 'bg-slate-400/10',
-      border: 'hover:border-slate-400/50',
-      color: 'from-slate-400 to-slate-600',
-      description:
-        'Wadah pengembangan bisnis berbasis teknologi. Identifikasi peluang pasar, model bisnis inovatif, dan strategi pemasaran digital untuk mendorong kewirausahaan mahasiswa melalui sinergi bisnis dan teknis.',
-      icon: MdBusinessCenter,
-      iconColor: 'text-slate-400',
-      id: 8,
-      name: 'Bisnis TIK',
-      tag: 'Business'
-    }
-  ]
+const divisions = [
+  {
+    bg: 'bg-red-500/10',
+    border: 'hover:border-red-500/50',
+    color: 'from-red-500 to-orange-500',
+    description:
+      'Wadah bagi mahasiswa Poliban untuk mempelajari kerentanan di dunia maya dan mengembangkan kemampuan menjadi ahli keamanan. Fokus pada kompetensi Capture The Flag (CTF) — kompetensi hacking profesional.',
+    icon: MdSecurity,
+    iconColor: 'text-red-500',
+    id: 1,
+    name: 'Cyber Security',
+    tag: 'Security'
+  },
+  {
+    bg: 'bg-blue-500/10',
+    border: 'hover:border-blue-500/50',
+    color: 'from-blue-500 to-cyan-500',
+    description:
+      'Tempat bagi seniman visual untuk menciptakan dunia yang hidup. Fokus pada desain karakter, teknik animasi, dan visualisasi cerita yang menggabungkan imajinasi artistik dengan keahlian teknis tingkat tinggi.',
+    icon: MdAnimation,
+    iconColor: 'text-blue-500',
+    id: 2,
+    name: 'Animasi',
+    tag: 'Creative'
+  },
+  {
+    bg: 'bg-primary/10',
+    border: 'hover:border-primary/50',
+    color: 'from-primary to-purple-500',
+    description:
+      'Pengembangan perangkat lunak dari konsep hingga kode. Menguasai bahasa pemrograman dan teknologi terkini untuk membangun solusi perangkat lunak yang efisien, inovatif, dan berdampak nyata bagi industri.',
+    icon: MdCode,
+    iconColor: 'text-primary',
+    id: 3,
+    name: 'Programming',
+    tag: 'Software'
+  },
+  {
+    bg: 'bg-emerald-500/10',
+    border: 'hover:border-emerald-500/50',
+    color: 'from-emerald-500 to-teal-500',
+    description:
+      'Eksplorasi kreativitas dalam pembuatan permainan digital. Merancang, mengembangkan, dan menguji game dengan fokus pada grafis, dan animasi untuk menciptakan pengalaman bermain yang luar biasa.',
+    icon: MdGamepad,
+    iconColor: 'text-emerald-500',
+    id: 5,
+    name: 'Game Development',
+    tag: 'Gaming'
+  },
+  {
+    bg: 'bg-purple-500/10',
+    border: 'hover:border-purple-500/50',
+    color: 'from-purple-500 to-indigo-500',
+    description:
+      'Menggali konektivitas objek fisik melalui jaringan digital. Solusi teknologi dari sensor cerdas hingga pemantauan jarak jauh untuk menciptakan lingkungan pintar guna mewujudkan Revolusi Industri 4.0.',
+    icon: MdMemory,
+    iconColor: 'text-purple-500',
+    id: 6,
+    name: 'Internet Of Things',
+    tag: 'Hardware'
+  },
+  {
+    bg: 'bg-orange-500/10',
+    border: 'hover:border-orange-500/50',
+    color: 'from-orange-500 to-yellow-500',
+    description:
+      'Fokus pada desain antarmuka dan pengalaman pengguna yang intuitif. Melalui riset, prototipe, dan usability testing untuk menciptakan pengalaman digital optimal yang meningkatkan kepuasan pengguna.',
+    icon: MdBrush,
+    iconColor: 'text-orange-500',
+    id: 7,
+    name: 'UI/UX',
+    tag: 'Design'
+  },
+  {
+    bg: 'bg-slate-400/10',
+    border: 'hover:border-slate-400/50',
+    color: 'from-slate-400 to-slate-600',
+    description:
+      'Wadah pengembangan bisnis berbasis teknologi. Identifikasi peluang pasar, model bisnis inovatif, dan strategi pemasaran digital untuk mendorong kewirausahaan mahasiswa melalui sinergi bisnis dan teknis.',
+    icon: MdBusinessCenter,
+    iconColor: 'text-slate-400',
+    id: 8,
+    name: 'Bisnis TIK',
+    tag: 'Business'
+  }
+]
 
+export default function Divisi() {
   return (
     <section className='py-20 lg:py-32 bg-background-dark relative overflow-hidden' id='divisi'>
       {/* Dynamic Background */}

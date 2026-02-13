@@ -30,7 +30,6 @@ export default function About() {
                   src='/logo-itech.svg'
                   width={400}
                   height={400}
-                  priority
                 />
               </div>
 
@@ -48,7 +47,7 @@ export default function About() {
                     <p className='text-[8px] sm:text-[10px] text-slate-500 font-bold uppercase tracking-tighter'>
                       Years of
                     </p>
-                    <p className='text-[10px] sm:text-xs font-black dark:text-white'>Experience</p>
+                    <p className='text-[10px] sm:text-xs font-black text-white'>Experience</p>
                   </div>
                 </div>
               </div>
@@ -66,7 +65,7 @@ export default function About() {
                     <p className='text-[8px] sm:text-[10px] text-slate-500 font-bold uppercase tracking-tighter'>
                       Active
                     </p>
-                    <p className='text-[10px] sm:text-xs font-black dark:text-white'>Members</p>
+                    <p className='text-[10px] sm:text-xs font-black text-white'>Members</p>
                   </div>
                 </div>
               </div>
@@ -84,7 +83,7 @@ export default function About() {
                     <p className='text-[8px] sm:text-[10px] text-slate-500 font-bold uppercase tracking-tighter'>
                       Finished
                     </p>
-                    <p className='text-[10px] sm:text-xs font-black dark:text-white'>Projects</p>
+                    <p className='text-[10px] sm:text-xs font-black text-white'>Projects</p>
                   </div>
                 </div>
               </div>
@@ -109,7 +108,7 @@ export default function About() {
                   The Community
                 </span>
               </div>
-              <h2 className='text-4xl md:text-5xl font-black text-slate-900 dark:text-white leading-[1.1] tracking-tighter'>
+              <h2 className='text-4xl md:text-5xl font-black text-white leading-[1.1] tracking-tighter'>
                 Mencetak{' '}
                 <span className='text-transparent bg-clip-text bg-linear-to-r from-primary to-purple-500'>
                   Generasi Unggul
@@ -124,10 +123,9 @@ export default function About() {
               <div className='absolute bottom-0 left-0 w-32 h-32 bg-accent/5 rounded-full blur-3xl -ml-16 -mb-16 group-hover:bg-accent/10 transition-all duration-700' />
 
               <div className='relative z-10'>
-                <p className='text-slate-600 dark:text-slate-400 leading-relaxed font-medium text-lg'>
-                  <span className='text-primary dark:text-primary font-bold'>iTech Poliban</span>{' '}
-                  merupakan salah satu{' '}
-                  <span className='text-slate-900 dark:text-white font-bold bg-white/5 px-2 py-0.5 rounded-lg border border-white/10'>
+                <p className='text-slate-400 leading-relaxed font-medium text-lg'>
+                  <span className='text-primary font-bold'>iTech Poliban</span> merupakan salah satu{' '}
+                  <span className='text-white font-bold bg-white/5 px-2 py-0.5 rounded-lg border border-white/10'>
                     komunitas IT
                   </span>{' '}
                   yang ada di Politeknik Negeri Banjarmasin. Didirikan pada tanggal{' '}
@@ -143,7 +141,7 @@ export default function About() {
 
                 <div className='my-6 h-px w-full bg-linear-to-r from-transparent via-white/10 to-transparent' />
 
-                <p className='text-slate-600 dark:text-slate-400 leading-relaxed font-medium text-lg'>
+                <p className='text-slate-400 leading-relaxed font-medium text-lg'>
                   Kami adalah wadah bagi mahasiswa yang memiliki{' '}
                   <span className='text-transparent bg-clip-text bg-linear-to-r from-primary to-purple-500 font-extrabold italic'>
                     Passion di dunia IT
@@ -151,10 +149,8 @@ export default function About() {
                   untuk belajar dan berkembang bersama, baik{' '}
                   <span className='text-primary font-bold'>Hardskill</span> maupun{' '}
                   <span className='text-purple-500 font-bold'>Softskill</span>. Kami terbuka untuk{' '}
-                  <span className='text-slate-900 dark:text-white font-bold'>
-                    Semua Program Studi di Poliban
-                  </span>{' '}
-                  tanpa latar belakang IT sebelumnya.
+                  <span className='text-white font-bold'>Semua Program Studi di Poliban</span> tanpa
+                  latar belakang IT sebelumnya.
                 </p>
               </div>
             </div>
@@ -182,16 +178,16 @@ export default function About() {
               ].map(item => (
                 <div
                   key={item.label}
-                  className='group/card p-3 sm:p-4 rounded-2xl bg-slate-100 dark:bg-white/5 border border-transparent hover:border-primary/30 transition-all flex flex-col items-center text-center space-y-2 sm:space-y-3 cursor-default'>
+                  className='group/card p-3 sm:p-4 rounded-2xl bg-white/5 border border-transparent hover:border-primary/30 transition-all flex flex-col items-center text-center space-y-2 sm:space-y-3 cursor-default'>
                   <div
                     className={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl ${item.color} flex items-center justify-center group-hover/card:scale-110 group-hover/card:rotate-6 transition-all duration-300`}>
                     {item.icon}
                   </div>
                   <div>
-                    <h4 className='text-[10px] sm:text-xs font-black dark:text-white uppercase tracking-tighter'>
+                    <h4 className='text-[10px] sm:text-xs font-black text-white uppercase tracking-tighter'>
                       {item.label}
                     </h4>
-                    <p className='hidden sm:block text-[10px] text-slate-500 dark:text-slate-400 font-bold leading-tight mt-1'>
+                    <p className='hidden sm:block text-[10px] text-slate-400 font-bold leading-tight mt-1'>
                       {item.desc}
                     </p>
                   </div>

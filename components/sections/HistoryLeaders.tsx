@@ -1,58 +1,69 @@
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa6'
 
-export default function HistoryLeaders() {
-  const leaders = [
-    {
-      color: 'from-primary to-purple-600',
-      id: 1,
-      image: '/placeholder-user.webp', // I'll use placeholders or just a div if image not found
-      name: 'BUDIANNOR',
-      period: '2024 - sekarang',
-      role: 'Ketua Umum',
-      socials: {
-        github: '#',
-        instagram: '#',
-        linkedin: '#'
-      }
-    },
-    {
-      color: 'from-accent to-yellow-500',
-      id: 2,
-      image: '/placeholder-user.webp',
-      name: 'M. Azhar Sadhikin',
-      period: '2023 - 2024',
-      role: 'Ketua Umum',
-      socials: {
-        instagram: '#',
-        linkedin: '#'
-      }
-    },
-    {
-      color: 'from-emerald-500 to-teal-500',
-      id: 3,
-      image: '/placeholder-user.webp',
-      name: 'Muhammad Iqbal',
-      period: '2022 - 2023',
-      role: 'Ketua Umum',
-      socials: {
-        github: '#',
-        instagram: '#'
-      }
-    },
-    {
-      color: 'from-emerald-500 to-teal-500',
-      id: 4,
-      image: '/placeholder-user.webp',
-      name: 'Harry H.',
-      period: '2021 - 2022',
-      role: 'Ketua Umum',
-      socials: {
-        github: '#',
-        instagram: '#'
-      }
-    }
-  ]
+interface Social {
+  github?: string
+  instagram?: string
+  linkedin?: string
+}
 
+interface Leader {
+  color: string
+  id: number
+  name: string
+  period: string
+  role: string
+  socials: Social
+}
+
+const leaders: Leader[] = [
+  {
+    color: 'from-primary to-purple-600',
+    id: 1,
+    name: 'BUDIANNOR',
+    period: '2024 - sekarang',
+    role: 'Ketua Umum',
+    socials: {
+      github: '#',
+      instagram: '#',
+      linkedin: '#'
+    }
+  },
+  {
+    color: 'from-accent to-yellow-500',
+    id: 2,
+    name: 'M. Azhar Sadhikin',
+    period: '2023 - 2024',
+    role: 'Ketua Umum',
+    socials: {
+      instagram: '#',
+      linkedin: '#'
+    }
+  },
+  {
+    color: 'from-emerald-500 to-teal-500',
+    id: 3,
+    name: 'Muhammad Iqbal',
+    period: '2022 - 2023',
+    role: 'Ketua Umum',
+    socials: {
+      github: '#',
+      instagram: '#'
+    }
+  },
+  {
+    color: 'from-emerald-500 to-teal-500',
+    id: 4,
+    name: 'Harry H.',
+    period: '2021 - 2022',
+    role: 'Ketua Umum',
+    socials: {
+      github: '#',
+      instagram: '#'
+    }
+  }
+]
+
+export default function HistoryLeaders() {
   return (
     <section
       className='py-24 lg:py-40 bg-background-dark relative overflow-hidden'

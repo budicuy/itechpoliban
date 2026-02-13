@@ -18,14 +18,14 @@ export default function Hero() {
               The Digital Frontier
             </span>
           </div>
-          <h1 className='text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-slate-900 dark:text-white leading-[1.1] lg:leading-[0.95] tracking-tighter'>
+          <h1 className='text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-white leading-[1.1] lg:leading-[0.95] tracking-tighter'>
             Empowering <br className='hidden sm:block' />
             <span className='text-transparent bg-clip-text bg-linear-to-r from-primary via-purple-400 to-accent'>
               Future Tech
             </span>
             <br className='hidden sm:block' /> Leaders
           </h1>
-          <p className='text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-lg mx-auto lg:mx-0 leading-relaxed font-medium'>
+          <p className='text-lg md:text-xl text-slate-400 max-w-lg mx-auto lg:mx-0 leading-relaxed font-medium'>
             Wadah pengembangan kreativitas dan inovasi mahasiswa Politeknik Negeri Banjarmasin dalam
             bidang teknologi informasi untuk masa depan digital yang gemilang.
           </p>
@@ -38,7 +38,7 @@ export default function Hero() {
             </button>
             <button
               type='button'
-              className='w-full sm:w-auto px-8 py-4 sm:px-10 sm:py-5 border-2 border-slate-300 dark:border-primary/30 text-slate-900 dark:text-white font-bold rounded-2xl hover:bg-primary/5 transition-all'>
+              className='w-full sm:w-auto px-8 py-4 sm:px-10 sm:py-5 border-2 border-primary/30 text-white font-bold rounded-2xl hover:bg-primary/5 transition-all'>
               Visi & Misi
             </button>
           </div>

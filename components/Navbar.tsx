@@ -5,6 +5,14 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { HiBars3, HiXMark } from 'react-icons/hi2'
 
+const menuLinks = [
+  { href: '#about', name: 'About' },
+  { href: '#visi-misi', name: 'Visi Misi' },
+  { href: '#divisi', name: 'Divisi' },
+  { href: '#prestasi', name: 'Prestasi' },
+  { href: '#history-leaders', name: 'History' }
+]
+
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
@@ -13,32 +21,9 @@ export default function Navbar() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20)
     }
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
-
-  const menuLinks = [
-    {
-      href: '#about',
-      name: 'About'
-    },
-    {
-      href: '#visi-misi',
-      name: 'Visi Misi'
-    },
-    {
-      href: '#divisi',
-      name: 'Divisi'
-    },
-    {
-      href: '#prestasi',
-      name: 'Prestasi'
-    },
-    {
-      href: '#history-leaders',
-      name: 'History'
-    }
-  ]
 
   return (
     <nav
@@ -59,7 +44,7 @@ export default function Navbar() {
               priority
             />
           </div>
-          <span className='text-xl font-extrabold tracking-tighter text-slate-900 dark:text-white uppercase'>
+          <span className='text-xl font-extrabold tracking-tighter text-white uppercase'>
             iTech <span className='text-accent'>Poliban</span>
           </span>
         </Link>

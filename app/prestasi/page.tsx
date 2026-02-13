@@ -1,104 +1,110 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { MdArrowBack, MdMilitaryTech, MdOutlineLocationOn } from 'react-icons/md'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/sections/Footer'
 
-export default function PrestasiPage() {
-  const allAchievements = [
-    {
-      items: [
-        {
-          color: 'from-yellow-400 to-amber-600',
-          competition: 'Lomba Kreativitas Pemuda Provinsi Kalimantan Selatan',
-          description: 'Dalam rangka memeriahkan Hari Jadi Ke-75 Provinsi Kalimantan Selatan.',
-          rank: 'Gold Medal',
-          title: 'Juara I Kategori Software'
-        },
-        {
-          color: 'from-slate-300 to-slate-500',
-          competition: 'Lomba Kreativitas Pemuda Provinsi Kalimantan Selatan',
-          description: 'Dalam rangka memeriahkan Hari Jadi Ke-75 Provinsi Kalimantan Selatan.',
-          rank: 'Silver Medal',
-          title: 'Juara II Kategori Hardware'
-        },
-        {
-          color: 'from-orange-400 to-red-600',
-          competition: 'Lomba Kreativitas Pemuda Provinsi Kalimantan Selatan',
-          description: 'Dalam rangka memeriahkan Hari Jadi Ke-75 Provinsi Kalimantan Selatan.',
-          rank: 'Bronze Medal',
-          title: 'Juara III Kategori Desain Grafis'
-        }
-      ],
-      year: '2025'
-    },
-    {
-      items: [
-        {
-          color: 'from-blue-400 to-indigo-600',
-          competition: 'Tingkat Provinsi Kalimantan Selatan',
-          description: 'Penghargaan atas dedikasi dalam kepeloporan bidang teknologi.',
-          rank: 'Gold Medal',
-          title: 'Juara I Pemuda Pelopor'
-        },
-        {
-          color: 'from-emerald-400 to-teal-600',
-          competition: 'Bank Kalsel Tahun 2024',
-          description: 'Kompetisi pengembangan solusi perbankan digital.',
-          rank: 'Winner',
-          title: 'Juara I Web Coding Competition'
-        },
-        {
-          color: 'from-purple-400 to-fuchsia-600',
-          competition: 'Competition 2024',
-          description: 'Kemenangan di bidang administrasi bisnis internasional.',
-          rank: 'International Winner',
-          title: 'Juara I International Business Administration'
-        },
-        {
-          color: 'from-red-400 to-rose-600',
-          competition: 'Category Capture The Flag 2024',
-          description: 'Kompetisi keamanan siber berskala nasional.',
-          rank: 'Top Security Team',
-          title: 'Juara I Healthkathon BPJS Kesehatan'
-        },
-        {
-          color: 'from-yellow-400 to-orange-600',
-          competition: 'Banjarmasin 2024',
-          description: 'Inovasi untuk kemajuan tata kelola perkotaan.',
-          rank: 'Innovation Award',
-          title: 'Juara II KOMVAS (Kompetisi Inovasi Kota)'
-        },
-        {
-          color: 'from-cyan-400 to-blue-600',
-          competition: 'Politeknik Negeri Jakarta 2024',
-          description: 'Ajang bergengsi mahasiswa informatika politeknik se-Indonesia.',
-          rank: 'National Gold',
-          title: 'Juara I Poster Animasi KMIPN VI'
-        }
-      ],
-      year: '2024'
-    },
-    {
-      items: [
-        {
-          color: 'from-teal-400 to-emerald-600',
-          competition: 'KMIPN IV Politeknik Negeri Batam 2022',
-          description: 'Pengembangan solusi aplikatif dalam waktu terbatas.',
-          rank: 'National Bronze',
-          title: 'Juara III Bidang Hackathon'
-        },
-        {
-          color: 'from-indigo-400 to-violet-600',
-          competition: 'KMIPN IV Politeknik Negeri Batam 2022',
-          description: 'Kompetisi teknis keamanan siber tingkat nasional.',
-          rank: 'National Bronze',
-          title: 'Juara III Bidang Keamanan Cyber'
-        }
-      ],
-      year: '2022'
-    }
-  ]
+export const metadata: Metadata = {
+  description: 'Galeri prestasi iTech Poliban dari tahun ke tahun di berbagai kompetisi IT.',
+  title: 'Galeri Prestasi - iTech Poliban'
+}
 
+const allAchievements = [
+  {
+    items: [
+      {
+        color: 'from-yellow-400 to-amber-600',
+        competition: 'Lomba Kreativitas Pemuda Provinsi Kalimantan Selatan',
+        description: 'Dalam rangka memeriahkan Hari Jadi Ke-75 Provinsi Kalimantan Selatan.',
+        rank: 'Gold Medal',
+        title: 'Juara I Kategori Software'
+      },
+      {
+        color: 'from-slate-300 to-slate-500',
+        competition: 'Lomba Kreativitas Pemuda Provinsi Kalimantan Selatan',
+        description: 'Dalam rangka memeriahkan Hari Jadi Ke-75 Provinsi Kalimantan Selatan.',
+        rank: 'Silver Medal',
+        title: 'Juara II Kategori Hardware'
+      },
+      {
+        color: 'from-orange-400 to-red-600',
+        competition: 'Lomba Kreativitas Pemuda Provinsi Kalimantan Selatan',
+        description: 'Dalam rangka memeriahkan Hari Jadi Ke-75 Provinsi Kalimantan Selatan.',
+        rank: 'Bronze Medal',
+        title: 'Juara III Kategori Desain Grafis'
+      }
+    ],
+    year: '2025'
+  },
+  {
+    items: [
+      {
+        color: 'from-blue-400 to-indigo-600',
+        competition: 'Tingkat Provinsi Kalimantan Selatan',
+        description: 'Penghargaan atas dedikasi dalam kepeloporan bidang teknologi.',
+        rank: 'Gold Medal',
+        title: 'Juara I Pemuda Pelopor'
+      },
+      {
+        color: 'from-emerald-400 to-teal-600',
+        competition: 'Bank Kalsel Tahun 2024',
+        description: 'Kompetisi pengembangan solusi perbankan digital.',
+        rank: 'Winner',
+        title: 'Juara I Web Coding Competition'
+      },
+      {
+        color: 'from-purple-400 to-fuchsia-600',
+        competition: 'Competition 2024',
+        description: 'Kemenangan di bidang administrasi bisnis internasional.',
+        rank: 'International Winner',
+        title: 'Juara I International Business Administration'
+      },
+      {
+        color: 'from-red-400 to-rose-600',
+        competition: 'Category Capture The Flag 2024',
+        description: 'Kompetisi keamanan siber berskala nasional.',
+        rank: 'Top Security Team',
+        title: 'Juara I Healthkathon BPJS Kesehatan'
+      },
+      {
+        color: 'from-yellow-400 to-orange-600',
+        competition: 'Banjarmasin 2024',
+        description: 'Inovasi untuk kemajuan tata kelola perkotaan.',
+        rank: 'Innovation Award',
+        title: 'Juara II KOMVAS (Kompetisi Inovasi Kota)'
+      },
+      {
+        color: 'from-cyan-400 to-blue-600',
+        competition: 'Politeknik Negeri Jakarta 2024',
+        description: 'Ajang bergengsi mahasiswa informatika politeknik se-Indonesia.',
+        rank: 'National Gold',
+        title: 'Juara I Poster Animasi KMIPN VI'
+      }
+    ],
+    year: '2024'
+  },
+  {
+    items: [
+      {
+        color: 'from-teal-400 to-emerald-600',
+        competition: 'KMIPN IV Politeknik Negeri Batam 2022',
+        description: 'Pengembangan solusi aplikatif dalam waktu terbatas.',
+        rank: 'National Bronze',
+        title: 'Juara III Bidang Hackathon'
+      },
+      {
+        color: 'from-indigo-400 to-violet-600',
+        competition: 'KMIPN IV Politeknik Negeri Batam 2022',
+        description: 'Kompetisi teknis keamanan siber tingkat nasional.',
+        rank: 'National Bronze',
+        title: 'Juara III Bidang Keamanan Cyber'
+      }
+    ],
+    year: '2022'
+  }
+]
+
+export default function PrestasiPage() {
   return (
     <main className='min-h-screen bg-background-dark'>
       <Navbar />
