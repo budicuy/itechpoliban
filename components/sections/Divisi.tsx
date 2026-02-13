@@ -1,3 +1,6 @@
+'use client'
+
+import { motion, type Variants } from 'motion/react'
 import {
   MdAnimation,
   MdBrush,
@@ -9,6 +12,7 @@ import {
   MdRocketLaunch,
   MdSecurity
 } from 'react-icons/md'
+import { DivisiDecoration } from '../ui/SectionDecoration'
 
 const divisions = [
   {
@@ -98,48 +102,115 @@ const divisions = [
 ]
 
 export default function Divisi() {
+  const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  }
+
+  const cardVariants: Variants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
+      y: 0
+    }
+  }
+
+  const wordVariants: Variants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      transition: { duration: 0.5, ease: 'easeOut' },
+      y: 0
+    }
+  }
+
+  const headingLines = ['Kuasai Ilmu,', 'Wujudkan Masa Depan']
+
   return (
     <section className='py-20 lg:py-32 bg-background-dark relative overflow-hidden' id='divisi'>
+      <DivisiDecoration />
       {/* Dynamic Background */}
       <div className='absolute top-0 inset-x-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent' />
-      <div className='absolute top-1/3 left-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[150px] -ml-[300px]' />
-      <div className='absolute bottom-1/3 right-0 w-[600px] h-[600px] bg-accent/5 rounded-full blur-[150px] -mr-[300px]' />
+      <motion.div
+        animate={{ opacity: [0.03, 0.07, 0.03], scale: [1, 1.2, 1] }}
+        transition={{ duration: 10, repeat: Number.POSITIVE_INFINITY }}
+        className='absolute top-1/3 left-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[150px] -ml-[300px]'
+      />
+      <motion.div
+        animate={{ opacity: [0.03, 0.05, 0.03], scale: [1.2, 1, 1.2] }}
+        transition={{ duration: 12, repeat: Number.POSITIVE_INFINITY }}
+        className='absolute bottom-1/3 right-0 w-[600px] h-[600px] bg-accent/5 rounded-full blur-[150px] -mr-[300px]'
+      />
 
       <div className='max-w-7xl mx-auto px-6 relative z-10'>
-        <div className='flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8'>
-          <div className='space-y-4 max-w-2xl'>
-            <div className='inline-flex items-center px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary'>
+        <motion.div
+          initial='hidden'
+          whileInView='visible'
+          viewport={{ once: true }}
+          variants={containerVariants}
+          className='flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8'>
+          <div className='space-y-4 max-w-2xl text-reveal-container'>
+            <motion.div
+              variants={wordVariants}
+              className='inline-flex items-center px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary'>
               <span className='w-1.5 h-1.5 rounded-full bg-accent mr-2' />
               <span className='text-[10px] font-black uppercase tracking-[0.2em]'>
                 Our Specializations
               </span>
-            </div>
+            </motion.div>
             <div className='relative'>
-              <div
+              <motion.div
                 aria-hidden='true'
+                animate={{ opacity: [0.4, 0.7, 0.4] }}
+                transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY }}
                 className='absolute inset-0 text-4xl md:text-6xl font-black leading-tight tracking-tight blur-2xl opacity-70 pointer-events-none select-none'>
-                <span className='text-white'>Kuasai Ilmu,</span> <br />
-                <span className='text-primary'>Wujudkan Masa Depan</span>
-              </div>
+                {headingLines.map((line, i) => (
+                  <div key={`glow-${line}-${i}`}>{line}</div>
+                ))}
+              </motion.div>
               <h2 className='relative text-4xl md:text-6xl font-black text-white leading-tight tracking-tight'>
-                Kuasai Ilmu, <br />
-                <span className='text-transparent bg-clip-text bg-linear-to-r from-primary via-purple-400 to-accent'>
-                  Wujudkan Masa Depan
-                </span>
+                {headingLines.map((line, i) => (
+                  <div key={`line-${line}-${i}`} className='overflow-hidden'>
+                    <motion.span
+                      variants={wordVariants}
+                      className={
+                        i === 1
+                          ? 'text-transparent bg-clip-text bg-linear-to-r from-primary via-purple-400 to-accent block'
+                          : 'block'
+                      }>
+                      {line}
+                    </motion.span>
+                  </div>
+                ))}
               </h2>
             </div>
           </div>
-          <p className='text-slate-400 max-w-sm font-medium text-lg leading-relaxed border-l-2 border-primary/30 pl-6 hidden md:block'>
+          <motion.p
+            variants={wordVariants}
+            className='text-slate-400 max-w-sm font-medium text-lg leading-relaxed border-l-2 border-primary/30 pl-6 hidden md:block'>
             Pilih jalur spesialisasimu dan kembangkan talenta di lingkungan yang tepat.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
-        <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
+        <motion.div
+          variants={containerVariants}
+          initial='hidden'
+          whileInView='visible'
+          viewport={{ margin: '-50px', once: true }}
+          className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {divisions.map(div => (
-            <div
+            <motion.div
               key={div.id}
-              className={`group relative glass-card p-10 rounded-[3rem] border-white/10 md:border-white/5 ${div.border} transition-all duration-700 hover:-translate-y-3 hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)] cursor-default overflow-hidden`}>
-              {/* Animated Corner Highlight - Fixed to follow border radius */}
+              variants={cardVariants}
+              whileHover={{ scale: 1.02, y: -10 }}
+              className={`group relative glass-card p-10 rounded-[3rem] border-white/10 md:border-white/5 ${div.border} transition-all duration-700 hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)] cursor-default overflow-hidden`}>
+              {/* Animated Corner Highlight */}
               <div
                 className={`absolute top-0 right-0 w-[3px] h-20 md:h-0 bg-linear-to-b ${div.color} group-hover:md:h-32 transition-all duration-700 z-30 rounded-full`}
               />
@@ -154,12 +225,13 @@ export default function Divisi() {
 
               <div className='relative z-10'>
                 <div className='flex items-center justify-between mb-8'>
-                  <div
-                    className={`w-16 h-16 rounded-3xl ${div.bg} flex items-center justify-center border border-white/20 md:border-white/5 group-hover:md:border-white/10 scale-110 md:scale-100 group-hover:md:scale-110 md:group-hover:rotate-6 transition-all duration-500 shadow-inner`}>
+                  <motion.div
+                    whileHover={{ rotate: 6, scale: 1.1 }}
+                    className={`w-16 h-16 rounded-3xl ${div.bg} flex items-center justify-center border border-white/20 md:border-white/5 group-hover:md:border-white/10 scale-110 md:scale-100 transition-all duration-500 shadow-inner`}>
                     <div.icon
                       className={`text-3xl ${div.iconColor} drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]`}
                     />
-                  </div>
+                  </motion.div>
                   <span className='px-3 py-1 rounded-full bg-white/10 md:bg-white/5 border border-white/20 md:border-white/10 text-[8px] font-black uppercase tracking-widest text-white md:text-slate-400 group-hover:md:text-white transition-colors'>
                     {div.tag}
                   </span>
@@ -182,11 +254,13 @@ export default function Divisi() {
                   </span>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
 
-          {/* CTA Card - The "Mantap" part */}
-          <div className='md:col-span-2 lg:col-span-1 group perspective-1000'>
+          {/* CTA Card */}
+          <motion.div
+            variants={cardVariants}
+            className='md:col-span-2 lg:col-span-1 group perspective-1000'>
             <div className='relative h-full overflow-hidden rounded-[3rem] p-1 shadow-2xl transition-all duration-700 group-hover:scale-[1.02]'>
               {/* Moving Gradient Background */}
               <div className='absolute inset-0 bg-linear-to-br from-primary via-purple-600 to-accent animate-[gradient_8s_ease_infinite] bg-size-[400%_400%]' />
@@ -195,9 +269,11 @@ export default function Divisi() {
                 <div className='absolute inset-0 bg-dotted-grid-bg opacity-20 group-hover:opacity-40 transition-opacity' />
 
                 <div className='relative z-10 space-y-6'>
-                  <div className='w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mx-auto border border-white/20'>
+                  <motion.div
+                    whileHover={{ rotate: [0, -10, 10, 0], scale: 1.1 }}
+                    className='w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mx-auto border border-white/20'>
                     <MdRocketLaunch className='text-4xl text-white' />
-                  </div>
+                  </motion.div>
                   <div>
                     <h3 className='text-3xl font-black text-white leading-tight'>
                       Siap Untuk <br />
@@ -207,12 +283,14 @@ export default function Divisi() {
                       Jadilah bagian dari generasi teknologi berikutnya bersama Poliban.
                     </p>
                   </div>
-                  <button
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
                     type='button'
                     className='group/btn relative px-8 py-4 bg-white text-slate-900 rounded-full font-black text-sm uppercase tracking-widest hover:bg-accent transition-all duration-300 shadow-[0_10px_30px_rgba(255,255,255,0.2)] flex items-center gap-2 mx-auto'>
                     Daftar Sekarang
                     <MdChevronRight className='text-xl group-hover/btn:translate-x-1 transition-transform' />
-                  </button>
+                  </motion.button>
                 </div>
 
                 {/* Decorative floating dots */}
@@ -220,8 +298,8 @@ export default function Divisi() {
                 <div className='absolute bottom-10 right-10 w-3 h-3 bg-primary rounded-full animate-ping shadow-[0_0_15px_rgba(102,15,189,0.5)]' />
               </div>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   )

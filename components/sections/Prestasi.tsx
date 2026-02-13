@@ -1,5 +1,9 @@
+'use client'
+
+import { motion, type Variants } from 'motion/react'
 import Link from 'next/link'
 import { MdEmojiEvents, MdMilitaryTech, MdOutlineLocationOn } from 'react-icons/md'
+import { PrestasiDecoration } from '../ui/SectionDecoration'
 
 const achievements = [
   {
@@ -38,45 +42,116 @@ const achievements = [
 ]
 
 export default function Prestasi() {
+  const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  }
+
+  const cardVariants: Variants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
+      y: 0
+    }
+  }
+
+  const wordVariants: Variants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      transition: { duration: 0.5, ease: 'easeOut' },
+      y: 0
+    }
+  }
+
+  const headingText = 'Prestasi Terbaru'
+  const words = headingText.split(' ')
+
   return (
     <section className='py-24 lg:py-40 bg-background-dark relative overflow-hidden' id='prestasi'>
+      <PrestasiDecoration />
       {/* Decorative Elements */}
-      <div className='absolute top-1/4 left-0 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[120px] -ml-40' />
-      <div className='absolute bottom-1/4 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[150px] -mr-40' />
+      <motion.div
+        animate={{
+          opacity: [0.3, 0.5, 0.3],
+          scale: [1, 1.2, 1]
+        }}
+        transition={{ duration: 8, ease: 'easeInOut', repeat: Number.POSITIVE_INFINITY }}
+        className='absolute top-1/4 left-0 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[120px] -ml-40'
+      />
+      <motion.div
+        animate={{
+          opacity: [0.2, 0.4, 0.2],
+          scale: [1.2, 1, 1.2]
+        }}
+        transition={{ duration: 10, ease: 'easeInOut', repeat: Number.POSITIVE_INFINITY }}
+        className='absolute bottom-1/4 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[150px] -mr-40'
+      />
 
       <div className='max-w-7xl mx-auto px-6 relative z-10'>
-        <div className='text-center mb-20 space-y-6'>
-          <div className='inline-flex items-center px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary'>
+        <motion.div
+          initial='hidden'
+          whileInView='visible'
+          viewport={{ once: true }}
+          variants={containerVariants}
+          className='text-center mb-20 space-y-6'>
+          <motion.div
+            variants={wordVariants}
+            className='inline-flex items-center px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary'>
             <MdEmojiEvents className='mr-2 text-xl' />
             <span className='text-[10px] font-black uppercase tracking-[0.2em]'>
               Latest Achievements
             </span>
-          </div>
+          </motion.div>
           <div className='relative'>
-            <div
+            <motion.div
               aria-hidden='true'
+              animate={{ opacity: [0.4, 0.7, 0.4] }}
+              transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY }}
               className='absolute inset-0 text-4xl md:text-6xl font-black tracking-tighter blur-2xl opacity-70 pointer-events-none select-none'>
-              <span className='text-white'>Prestasi </span>
-              <span className='text-primary'>Terbaru</span>
-            </div>
-            <h2 className='relative text-4xl md:text-6xl font-black text-white tracking-tighter'>
-              Prestasi{' '}
-              <span className='text-transparent bg-clip-text bg-linear-to-r from-primary via-purple-400 to-accent'>
-                Terbaru
-              </span>
+              {headingText}
+            </motion.div>
+            <h2 className='relative text-4xl md:text-6xl font-black text-white tracking-tighter flex justify-center gap-x-4'>
+              {words.map((word, i) => (
+                <motion.span
+                  key={`word-${word}-${i}`}
+                  variants={wordVariants}
+                  className={
+                    i === 1
+                      ? 'text-transparent bg-clip-text bg-linear-to-r from-primary via-purple-400 to-accent'
+                      : 'text-white'
+                  }>
+                  {word}
+                </motion.span>
+              ))}
             </h2>
           </div>
-          <p className='text-slate-400 max-w-2xl mx-auto text-lg font-medium lg:px-0 px-4'>
+          <motion.p
+            variants={wordVariants}
+            className='text-slate-400 max-w-2xl mx-auto text-lg font-medium lg:px-0 px-4'>
             Dedikasi berkelanjutan iTech Poliban dalam berinovasi dan berkompetisi di tingkat
             provinsi maupun nasional.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
-        <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
+        <motion.div
+          variants={containerVariants}
+          initial='hidden'
+          whileInView='visible'
+          viewport={{ margin: '-50px', once: true }}
+          className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {achievements.map(item => (
-            <div
+            <motion.div
               key={item.id}
-              className='group relative glass-card p-1 rounded-[2.5rem] border-white/5 hover:border-white/20 transition-all duration-500 hover:-translate-y-2'>
+              variants={cardVariants}
+              whileHover={{ y: -10 }}
+              className='group relative glass-card p-1 rounded-[2.5rem] border-white/5 hover:border-white/20 transition-all duration-500'>
               <div className='relative h-full bg-slate-900/40 backdrop-blur-xl rounded-[2.4rem] p-8 md:p-10 overflow-hidden'>
                 {/* Background Glow */}
                 <div
@@ -85,10 +160,11 @@ export default function Prestasi() {
 
                 <div className='relative z-10 space-y-6'>
                   <div className='flex items-center justify-between'>
-                    <div
+                    <motion.div
+                      whileHover={{ rotate: 5, scale: 1.1 }}
                       className={`w-14 h-14 rounded-2xl bg-linear-to-br ${item.color} flex items-center justify-center text-slate-900 shadow-lg`}>
                       <MdMilitaryTech className='text-3xl' />
-                    </div>
+                    </motion.div>
                     <div className='text-right'>
                       <div className='text-[10px] font-black text-accent uppercase tracking-widest'>
                         {item.year}
@@ -121,19 +197,24 @@ export default function Prestasi() {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
-        {/* View More Button (Dummy) */}
-        <div className='mt-20 text-center'>
+        {/* View More Button */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.5 }}
+          className='mt-20 text-center'>
           <Link
             href='/prestasi'
             className='inline-flex items-center justify-center gap-3 mx-auto px-10 py-5 bg-white/5 border border-white/10 hover:border-primary/50 text-white font-black uppercase tracking-[0.2em] text-xs rounded-2xl transition-all hover:bg-primary/10 group'>
             Lihat Semua Prestasi
             <MdEmojiEvents className='text-xl group-hover:rotate-12 transition-transform' />
           </Link>
-        </div>
+        </motion.div>
       </div>
     </section>
   )

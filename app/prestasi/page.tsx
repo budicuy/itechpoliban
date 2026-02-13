@@ -121,12 +121,20 @@ export default function PrestasiPage() {
             <MdArrowBack className='group-hover:-translate-x-1 transition-transform' />
             <span className='text-xs font-bold uppercase tracking-widest'>Kembali ke Beranda</span>
           </Link>
-          <h1 className='text-5xl md:text-7xl font-black text-white tracking-tighter mb-6'>
-            Galeri{' '}
-            <span className='text-transparent bg-clip-text bg-linear-to-r from-primary via-purple-400 to-accent'>
-              Prestasi
-            </span>
-          </h1>
+          <div className='relative'>
+            <div
+              aria-hidden='true'
+              className='absolute inset-0 text-5xl md:text-7xl font-black tracking-tighter blur-2xl opacity-70 pointer-events-none select-none'>
+              <span className='text-white'>Galeri </span>
+              <span className='text-primary'>Prestasi</span>
+            </div>
+            <h1 className='relative text-5xl md:text-7xl font-black text-white tracking-tighter mb-6'>
+              Galeri{' '}
+              <span className='text-transparent bg-clip-text bg-linear-to-r from-primary via-purple-400 to-accent'>
+                Prestasi
+              </span>
+            </h1>
+          </div>
           <p className='text-slate-400 max-w-2xl mx-auto text-lg font-medium italic'>
             "Satu visi, sejuta aksi, mengukir prestasi."
           </p>
