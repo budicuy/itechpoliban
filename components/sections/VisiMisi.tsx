@@ -50,13 +50,22 @@ export default function VisiMisi() {
               Goal & Objectives
             </span>
           </div>
-          <h2 className='text-4xl md:text-5xl font-black text-white px-2'>
-            Visi &{' '}
-            <span className='text-transparent bg-clip-text bg-linear-to-r from-accent to-yellow-200'>
-              Misi
-            </span>{' '}
-            Komunitas
-          </h2>
+          <div className='relative'>
+            <div
+              aria-hidden='true'
+              className='absolute inset-0 text-4xl md:text-5xl font-black blur-2xl opacity-70 pointer-events-none select-none'>
+              <span className='text-white'>Visi &amp; </span>
+              <span className='text-accent'>Misi</span>
+              <span className='text-white'> Komunitas</span>
+            </div>
+            <h2 className='relative text-4xl md:text-5xl font-black text-white px-2'>
+              Visi &{' '}
+              <span className='text-transparent bg-clip-text bg-linear-to-r from-accent to-yellow-200'>
+                Misi
+              </span>{' '}
+              Komunitas
+            </h2>
+          </div>
         </div>
 
         <div className='grid lg:grid-cols-5 gap-8 items-stretch'>

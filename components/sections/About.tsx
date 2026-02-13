@@ -108,13 +108,22 @@ export default function About() {
                   The Community
                 </span>
               </div>
-              <h2 className='text-4xl md:text-5xl font-black text-white leading-[1.1] tracking-tighter'>
-                Mencetak{' '}
-                <span className='text-transparent bg-clip-text bg-linear-to-r from-primary to-purple-500'>
-                  Generasi Unggul
-                </span>
-                di Bidang Teknologi
-              </h2>
+              <div className='relative'>
+                <div
+                  aria-hidden='true'
+                  className='absolute inset-0 text-4xl md:text-5xl font-black leading-[1.1] tracking-tighter blur-2xl opacity-70 pointer-events-none select-none'>
+                  <span className='text-white'>Mencetak </span>
+                  <span className='text-primary'>Generasi Unggul</span>
+                  <span className='text-white'> di Bidang Teknologi</span>
+                </div>
+                <h2 className='relative text-4xl md:text-5xl font-black text-white leading-[1.1] tracking-tighter'>
+                  Mencetak{' '}
+                  <span className='text-transparent bg-clip-text bg-linear-to-r from-primary to-purple-500'>
+                    Generasi Unggul
+                  </span>
+                  di Bidang Teknologi
+                </h2>
+              </div>
             </div>
 
             <div className='glass-card p-8 rounded-3xl border-white/5 relative group hover:border-primary/30 transition-all duration-500 overflow-hidden bg-linear-to-br from-white/5 via-transparent to-primary/5'>

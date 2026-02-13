@@ -114,12 +114,20 @@ export default function Divisi() {
                 Our Specializations
               </span>
             </div>
-            <h2 className='text-4xl md:text-6xl font-black text-white leading-tight tracking-tight'>
-              Kuasai Ilmu, <br />
-              <span className='text-transparent bg-clip-text bg-linear-to-r from-primary via-purple-400 to-accent'>
-                Wujudkan Masa Depan
-              </span>
-            </h2>
+            <div className='relative'>
+              <div
+                aria-hidden='true'
+                className='absolute inset-0 text-4xl md:text-6xl font-black leading-tight tracking-tight blur-2xl opacity-70 pointer-events-none select-none'>
+                <span className='text-white'>Kuasai Ilmu,</span> <br />
+                <span className='text-primary'>Wujudkan Masa Depan</span>
+              </div>
+              <h2 className='relative text-4xl md:text-6xl font-black text-white leading-tight tracking-tight'>
+                Kuasai Ilmu, <br />
+                <span className='text-transparent bg-clip-text bg-linear-to-r from-primary via-purple-400 to-accent'>
+                  Wujudkan Masa Depan
+                </span>
+              </h2>
+            </div>
           </div>
           <p className='text-slate-400 max-w-sm font-medium text-lg leading-relaxed border-l-2 border-primary/30 pl-6 hidden md:block'>
             Pilih jalur spesialisasimu dan kembangkan talenta di lingkungan yang tepat.

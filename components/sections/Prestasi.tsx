@@ -52,12 +52,20 @@ export default function Prestasi() {
               Latest Achievements
             </span>
           </div>
-          <h2 className='text-4xl md:text-6xl font-black text-white tracking-tighter'>
-            Prestasi{' '}
-            <span className='text-transparent bg-clip-text bg-linear-to-r from-primary via-purple-400 to-accent'>
-              Terbaru
-            </span>
-          </h2>
+          <div className='relative'>
+            <div
+              aria-hidden='true'
+              className='absolute inset-0 text-4xl md:text-6xl font-black tracking-tighter blur-2xl opacity-70 pointer-events-none select-none'>
+              <span className='text-white'>Prestasi </span>
+              <span className='text-primary'>Terbaru</span>
+            </div>
+            <h2 className='relative text-4xl md:text-6xl font-black text-white tracking-tighter'>
+              Prestasi{' '}
+              <span className='text-transparent bg-clip-text bg-linear-to-r from-primary via-purple-400 to-accent'>
+                Terbaru
+              </span>
+            </h2>
+          </div>
           <p className='text-slate-400 max-w-2xl mx-auto text-lg font-medium lg:px-0 px-4'>
             Dedikasi berkelanjutan iTech Poliban dalam berinovasi dan berkompetisi di tingkat
             provinsi maupun nasional.

@@ -19,8 +19,16 @@ export default function Hero() {
             </span>
           </div>
           <div className='relative'>
-            <div className='absolute -inset-8 bg-linear-to-br from-primary/40 via-purple-600/30 to-accent/20 blur-[80px] opacity-80 pointer-events-none' />
-            <div className='absolute top-1/2 left-1/4 -translate-y-1/2 w-[300px] h-[200px] bg-primary/50 blur-[100px] rounded-full opacity-70 pointer-events-none' />
+            <div
+              aria-hidden='true'
+              className='absolute inset-0 text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black leading-[1.1] lg:leading-[0.95] tracking-tighter blur-2xl opacity-70 pointer-events-none select-none'>
+              <span className='text-primary'>Empowering</span> <br className='hidden sm:block' />
+              <span className='text-transparent bg-clip-text bg-linear-to-r from-primary via-purple-400 to-accent'>
+                Future Tech
+              </span>
+              <br className='hidden sm:block' />
+              <span className='text-purple-500'> Leaders</span>
+            </div>
             <h1 className='relative text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-white leading-[1.1] lg:leading-[0.95] tracking-tighter'>
               Empowering <br className='hidden sm:block' />
               <span className='text-transparent bg-clip-text bg-linear-to-r from-primary via-purple-400 to-accent'>

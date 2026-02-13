@@ -81,12 +81,20 @@ export default function HistoryLeaders() {
                 Hall of Leaders
               </span>
             </div>
-            <h2 className='text-4xl md:text-6xl font-black text-white leading-tight'>
-              Jejak <br />
-              <span className='text-transparent bg-clip-text bg-linear-to-r from-primary via-purple-400 to-accent'>
-                Kepemimpinan
-              </span>
-            </h2>
+            <div className='relative'>
+              <div
+                aria-hidden='true'
+                className='absolute inset-0 text-4xl md:text-6xl font-black leading-tight blur-2xl opacity-70 pointer-events-none select-none'>
+                <span className='text-white'>Jejak</span> <br />
+                <span className='text-primary'>Kepemimpinan</span>
+              </div>
+              <h2 className='relative text-4xl md:text-6xl font-black text-white leading-tight'>
+                Jejak <br />
+                <span className='text-transparent bg-clip-text bg-linear-to-r from-primary via-purple-400 to-accent'>
+                  Kepemimpinan
+                </span>
+              </h2>
+            </div>
           </div>
           <p className='text-slate-400 max-w-sm font-medium text-lg border-l-2 border-primary/30 pl-6'>
             Para pemimpin yang telah membimbing iTech Poliban bertumbuh dan berinovasi dari masa ke
