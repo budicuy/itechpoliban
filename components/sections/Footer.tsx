@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { FaEnvelope, FaInstagram, FaLocationDot, FaPhone, FaXTwitter } from 'react-icons/fa6'
+import SectionDecoration from '@/components/ui/SectionDecoration'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -8,6 +9,7 @@ export default function Footer() {
     <footer
       className='bg-background-dark border-t border-white/5 pt-20 pb-10 relative overflow-hidden'
       id='kontak'>
+      <SectionDecoration />
       {/* Background Decorative Element */}
       <div className='absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-px bg-linear-to-r from-transparent via-primary/50 to-transparent' />
       <div className='absolute -bottom-24 -left-24 w-64 h-64 bg-primary/5 rounded-full blur-3xl' />

@@ -3,6 +3,7 @@
 import { motion, type Variants } from 'motion/react'
 import Image from 'next/image'
 import { FaBrain, FaCode, FaReact } from 'react-icons/fa'
+import SectionDecoration from '@/components/ui/SectionDecoration'
 
 export default function About() {
   const containerVariants: Variants = {
@@ -53,6 +54,7 @@ export default function About() {
 
   return (
     <section className='py-16 lg:py-32 bg-background-dark relative overflow-hidden' id='about'>
+      <SectionDecoration />
       <div className='max-w-7xl mx-auto px-6 relative z-10'>
         <motion.div
           initial='hidden'
@@ -174,7 +176,7 @@ export default function About() {
                 <h2 className='relative text-4xl md:text-5xl font-black text-white leading-[1.1] tracking-tighter flex flex-wrap gap-x-3'>
                   {words.map((word, i) => (
                     <motion.span
-                      key={`word-${word}-${i}`}
+                      key={word}
                       variants={wordVariants}
                       custom={i}
                       className={
