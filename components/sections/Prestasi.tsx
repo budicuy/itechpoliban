@@ -3,7 +3,6 @@
 import { motion, type Variants } from 'motion/react'
 import Link from 'next/link'
 import { MdEmojiEvents, MdMilitaryTech, MdOutlineLocationOn } from 'react-icons/md'
-import SectionDecoration from '@/components/ui/SectionDecoration'
 
 const achievements = [
   {
@@ -75,7 +74,6 @@ export default function Prestasi() {
 
   return (
     <section className='py-24 lg:py-40 bg-background-dark relative overflow-hidden' id='prestasi'>
-      <SectionDecoration />
       {/* Decorative Elements */}
       <motion.div
         animate={{
@@ -120,7 +118,7 @@ export default function Prestasi() {
             <h2 className='relative text-4xl md:text-6xl font-black text-white tracking-tighter flex justify-center gap-x-4'>
               {words.map((word, i) => (
                 <motion.span
-                  key={word}
+                  key={`word-${word}`}
                   variants={wordVariants}
                   className={
                     i === 1

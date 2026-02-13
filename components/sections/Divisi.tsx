@@ -12,7 +12,6 @@ import {
   MdRocketLaunch,
   MdSecurity
 } from 'react-icons/md'
-import SectionDecoration from '@/components/ui/SectionDecoration'
 
 const divisions = [
   {
@@ -134,7 +133,6 @@ export default function Divisi() {
 
   return (
     <section className='py-20 lg:py-32 bg-background-dark relative overflow-hidden' id='divisi'>
-      <SectionDecoration />
       {/* Dynamic Background */}
       <div className='absolute top-0 inset-x-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent' />
       <motion.div
@@ -171,12 +169,12 @@ export default function Divisi() {
                 transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY }}
                 className='absolute inset-0 text-4xl md:text-6xl font-black leading-tight tracking-tight blur-2xl opacity-70 pointer-events-none select-none'>
                 {headingLines.map(line => (
-                  <div key={line}>{line}</div>
+                  <div key={`glow-${line}`}>{line}</div>
                 ))}
               </motion.div>
               <h2 className='relative text-4xl md:text-6xl font-black text-white leading-tight tracking-tight'>
                 {headingLines.map((line, i) => (
-                  <div key={line} className='overflow-hidden'>
+                  <div key={`line-${line}`} className='overflow-hidden'>
                     <motion.span
                       variants={wordVariants}
                       className={

@@ -3,7 +3,6 @@
 import { AnimatePresence, motion, type Variants } from 'motion/react'
 import { useEffect, useState } from 'react'
 import { MdChevronRight, MdRocketLaunch, MdVisibility } from 'react-icons/md'
-import SectionDecoration from '@/components/ui/SectionDecoration'
 
 const misiData = [
   {
@@ -71,7 +70,6 @@ export default function VisiMisi() {
 
   return (
     <section className='py-20 lg:py-32 bg-background-dark relative overflow-hidden' id='visi-misi'>
-      <SectionDecoration />
       {/* Decorative Blobs */}
       <motion.div
         animate={{
@@ -116,7 +114,7 @@ export default function VisiMisi() {
             <h2 className='relative text-4xl md:text-5xl font-black text-white px-2 flex justify-center flex-wrap gap-x-4'>
               {words.map(word => (
                 <motion.span
-                  key={word}
+                  key={`word-${word}`}
                   variants={wordVariants}
                   className={
                     word === 'Misi'
