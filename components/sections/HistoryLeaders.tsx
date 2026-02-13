@@ -2,7 +2,6 @@
 
 import { motion, type Variants } from 'motion/react'
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa6'
-import { HistoryDecoration } from '../ui/SectionDecoration'
 
 interface Social {
   github?: string
@@ -102,7 +101,6 @@ export default function HistoryLeaders() {
     <section
       className='py-24 lg:py-40 bg-background-dark relative overflow-hidden'
       id='history-leaders'>
-      <HistoryDecoration />
       {/* Background Ornaments */}
       <motion.div
         animate={{ opacity: [0.03, 0.08, 0.03], scale: [1, 1.1, 1] }}

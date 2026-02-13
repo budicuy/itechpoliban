@@ -3,7 +3,6 @@
 import { AnimatePresence, motion, type Variants } from 'motion/react'
 import { useEffect, useState } from 'react'
 import { MdChevronRight, MdRocketLaunch, MdVisibility } from 'react-icons/md'
-import { VisiMisiDecoration } from '../ui/SectionDecoration'
 
 const misiData = [
   {
@@ -71,7 +70,6 @@ export default function VisiMisi() {
 
   return (
     <section className='py-20 lg:py-32 bg-background-dark relative overflow-hidden' id='visi-misi'>
-      <VisiMisiDecoration />
       {/* Decorative Blobs */}
       <motion.div
         animate={{

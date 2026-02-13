@@ -12,7 +12,6 @@ import {
   MdRocketLaunch,
   MdSecurity
 } from 'react-icons/md'
-import { DivisiDecoration } from '../ui/SectionDecoration'
 
 const divisions = [
   {
@@ -134,7 +133,6 @@ export default function Divisi() {
 
   return (
     <section className='py-20 lg:py-32 bg-background-dark relative overflow-hidden' id='divisi'>
-      <DivisiDecoration />
       {/* Dynamic Background */}
       <div className='absolute top-0 inset-x-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent' />
       <motion.div

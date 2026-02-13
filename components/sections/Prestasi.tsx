@@ -3,7 +3,6 @@
 import { motion, type Variants } from 'motion/react'
 import Link from 'next/link'
 import { MdEmojiEvents, MdMilitaryTech, MdOutlineLocationOn } from 'react-icons/md'
-import { PrestasiDecoration } from '../ui/SectionDecoration'
 
 const achievements = [
   {
@@ -75,7 +74,6 @@ export default function Prestasi() {
 
   return (
     <section className='py-24 lg:py-40 bg-background-dark relative overflow-hidden' id='prestasi'>
-      <PrestasiDecoration />
       {/* Decorative Elements */}
       <motion.div
         animate={{
