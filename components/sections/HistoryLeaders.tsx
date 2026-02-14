@@ -1,27 +1,14 @@
 'use client'
 
 import { motion, type Variants } from 'motion/react'
+import Image from 'next/image'
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa6'
 
-interface Social {
-  github?: string
-  instagram?: string
-  linkedin?: string
-}
-
-interface Leader {
-  color: string
-  id: number
-  name: string
-  period: string
-  role: string
-  socials: Social
-}
-
-const leaders: Leader[] = [
+const leaders = [
   {
     color: 'from-primary to-purple-600',
     id: 1,
+    image: '/img/leaders/budiannor.png',
     name: 'BUDIANNOR',
     period: '2024 - sekarang',
     role: 'Ketua Umum',
@@ -34,6 +21,7 @@ const leaders: Leader[] = [
   {
     color: 'from-accent to-yellow-500',
     id: 2,
+    image: '',
     name: 'M. Azhar Sadhikin',
     period: '2023 - 2024',
     role: 'Ketua Umum',
@@ -45,7 +33,8 @@ const leaders: Leader[] = [
   {
     color: 'from-emerald-500 to-teal-500',
     id: 3,
-    name: 'Muhammad Iqbal',
+    image: '',
+    name: 'Muhammad Iqbal Fardaus',
     period: '2022 - 2023',
     role: 'Ketua Umum',
     socials: {
@@ -56,7 +45,8 @@ const leaders: Leader[] = [
   {
     color: 'from-emerald-500 to-teal-500',
     id: 4,
-    name: 'Harry H.',
+    image: '',
+    name: 'Harry Hidayat',
     period: '2021 - 2022',
     role: 'Ketua Umum',
     socials: {
@@ -196,19 +186,30 @@ export default function HistoryLeaders() {
 
                 {/* Photo Perspective Frame */}
                 <div className='relative p-4 pb-0'>
-                  <div className='relative aspect-4/5 rounded-[1.8rem] overflow-hidden group-hover:scale-[1.02] transition-transform duration-700'>
-                    <div
-                      className={`absolute inset-0 bg-linear-to-br ${leader.color} opacity-20`}
-                    />
-                    <div className='absolute inset-0 bg-slate-950/60 flex flex-col items-center justify-center'>
-                      <motion.div
-                        whileHover={{ scale: 1.1 }}
-                        className='w-12 h-12 rounded-full border border-white/10 flex items-center justify-center mb-2'>
-                        <span className='text-[10px] text-white/20 font-black'>LEGACY</span>
-                      </motion.div>
-                    </div>
+                  <div className='relative aspect-square rounded-[1.8rem] overflow-hidden group-hover:scale-[1.02] transition-transform duration-700'>
+                    {leader.image ? (
+                      <Image
+                        src={leader.image}
+                        alt={leader.name}
+                        fill
+                        className='object-cover group-hover:scale-110 transition-transform duration-1000'
+                      />
+                    ) : (
+                      <>
+                        <div
+                          className={`absolute inset-0 bg-linear-to-br ${leader.color} opacity-20`}
+                        />
+                        <div className='absolute inset-0 bg-slate-950/60 flex flex-col items-center justify-center'>
+                          <motion.div
+                            whileHover={{ scale: 1.1 }}
+                            className='w-12 h-12 rounded-full border border-white/10 flex items-center justify-center mb-2'>
+                            <span className='text-[10px] text-white/20 font-black'>LEGACY</span>
+                          </motion.div>
+                        </div>
+                      </>
+                    )}
                     {/* Shadow Overlay */}
-                    <div className='absolute inset-x-0 bottom-0 h-1/2 bg-linear-to-t from-slate-950 via-slate-950/40 to-transparent' />
+                    <div className='absolute inset-x-0 bottom-0 h-3/4 bg-linear-to-t from-slate-950 via-slate-950/20 to-transparent z-10' />
 
                     {/* Period Floating Plate */}
                     <div className='absolute bottom-4 left-4 right-4 z-10'>
